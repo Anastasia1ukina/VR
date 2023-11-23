@@ -2,35 +2,37 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "home",
+        text: "Home",
       },
       {
-        href: "#",
-        text: "Страница 2"
+        href: "about us",
+        text: "About us",
       },
       {
-        href: "#",
-        text: "Страница 3"
+        href: "service",
+        text: "Service",
+      },
+      {
+        href: "pricing plan",
+        text: "Pricing Plan",
+      },
+      {
+        href: "blog",
+        text: "Blog",
       },
     ]
 
-  header.header(class=headerMods)
+  header.header.header--dark(class=headerMods)
     .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+
+      a.header__logo(href="#intro", data-move-to="intro", aria-label="Переход к началу страницы")
+        +icon("logo-text", "101", "30")
+
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks
-              - const activeState = currentUrl === link.href
               li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
+                +btn({text: link.text, href: "#"+link.href, scrollTo: link.href, isFilling: true}).main-nav__link
+          a.main-nav__contact(href="#") Contact us
