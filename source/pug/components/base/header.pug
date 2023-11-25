@@ -27,7 +27,8 @@ mixin header(headerMods, currentUrl)
     .container
 
       a.header__logo(href="#intro", data-move-to="intro", aria-label="Переход к началу страницы")
-        +icon("logo-text", "101", "30")
+        //- +icon("VRNas", "101", "30")
+        include ../../../img/svg/VRNas.svg
 
       nav.main-nav
         .main-nav__wrapper

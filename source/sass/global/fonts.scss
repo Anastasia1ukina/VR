@@ -1,10 +1,32 @@
 @font-face {
   font-style: normal;
   font-weight: 300;
-  font-family: "Montserrat";
+  font-family: "Chakra Petch";
 
   font-display: swap;
   src:
     url("../fonts/chakra-petch-light.woff2") format("woff2"),
     url("../fonts/chakra-petch-light.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Chakra Petch";
+
+  font-display: swap;
+  src:
+    url("../fonts/chakra-petch-semibold.woff2") format("woff2"),
+    url("../fonts/chakra-petch-semibold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Chakra Petch";
+
+  font-display: swap;
+  src:
+    url("../fonts/chakra-petch-bold.woff2") format("woff2"),
+    url("../fonts/chakra-petch-bold.woff") format("woff");
 }

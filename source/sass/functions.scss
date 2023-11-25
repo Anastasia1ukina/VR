@@ -44,18 +44,28 @@
 
 // ---------------------------------
 // 3) ремы в плюс от эталона и в минус (с другим коэффициентом), на планшете обычная верстка
-// functions.scss
-// @function size($size-in-px) {
-//   @return calc($size-in-px / $fz-default * 1rem);
-// }
-
-// @function size-desktop($size-in-px) {
-//   @return calc($size-in-px / $vp-1920 * 100vw);
-// }
-
-// @function size-tablet($size-in-px) {
-//   @return calc($size-in-px / $vp-1440 * 100vw);
-// }
+@function size($size-in-px) {
+    /* stylelint-disable-next-line */
+    @return calc($size-in-px / $fz-default * 1rem);
+  }
+  
+  /* stylelint-disable-next-line */
+  @function size-desktop($size-in-px) {
+    /* stylelint-disable-next-line */
+    @return calc($size-in-px / $vp-1440 * 100vw);
+  }
+  
+  /* stylelint-disable-next-line */
+  @function size-tablet($size-in-px) {
+    /* stylelint-disable-next-line */
+    @return calc($size-in-px / $vp-1024 * 100vw);
+  }
+  
+  /* stylelint-disable-next-line */
+  @function size-mobile($size-in-px) {
+    /* stylelint-disable-next-line */
+    @return calc($size-in-px / $vp-768 * 100vw);
+  }
 
 // reboot.scss
 // html {
