@@ -1,0 +1,28 @@
+.intro {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bg {
+        position: absolute;
+        z-index: 1;
+
+        svg {
+            width: size(1090px);
+            height: size(663px);
+        }
+    }
+
+    &__button {
+        font-family: $ff-chakra-petch;
+        font-size: size(14px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: size(14px);
+        letter-spacing: size(1.5px);
+        text-transform: uppercase;
+        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
+        padding: size(18px) size(38px);
+    }
+}
