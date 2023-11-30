@@ -1,0 +1,73 @@
+.about-us {
+    margin-top: size(120px);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        width: size(562px);
+        align-self: flex-end;
+    }
+
+    &__intro {
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: size(2.24px);
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: table;
+        margin: 0;
+    }
+
+    &__title {
+        font-family: $ff-chakra-petch;
+        font-size: size(48px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(58px);
+        letter-spacing: size(-0.24px);
+        margin: size(12px) 0;
+    }
+
+    &__description {
+        color: $color-light-grey;
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: size(28px);
+        margin: 0 0 size(24px) 0;
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: size(28px);
+        margin-bottom: size(14px);
+
+        background-image: url("../../img/svg/checkbox.svg");
+        background-position: 0;
+        background-repeat: no-repeat;
+        padding-left: size(28px);
+    }
+
+    &__button {
+        margin-top: size(23px);
+    }
+}

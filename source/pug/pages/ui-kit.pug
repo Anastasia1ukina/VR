@@ -23,6 +23,8 @@ block main
               a(href="#buttons") Кнопки
             li
               a(href="#forms") Элементы форм
+            li
+              a(href="#user") User
 
       //----------------------------------------------
       .container
@@ -81,7 +83,7 @@ block main
             pre
               |
               code(class="language-pug").
-                +btn({text: "Текст"})(disabled)
+                +btn({text: "Текст"})(disabled)        
 
         //- Элементы форм
         section.uikit__section(id="forms")
@@ -178,6 +180,16 @@ block main
                   optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
                 })(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1").custom-select
 
+        //- User
+        section.uikit__section(id="user")
+          h2.uikit__h2 Users 
+          .uikit__component 
+            p.uikit__text.uikit__text--class +user \ default
+            +user({clusterId: users["about"]})
+            pre
+              |
+              code(class="language-pug").
+                +user({clusterId: users["about"]})   
 
   script
     include ../../js/inline/ui-kit.js

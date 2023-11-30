@@ -23,6 +23,7 @@ html(lang="ru")
     //- используйте только для шрифта находящегося на первом экране
     link(rel="preload", href="fonts/chakra-petch-light.woff2", as="font", crossorigin="anonymous")
     link(rel="preload", href="fonts/chakra-petch-regular.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/chakra-petch-medium.woff2", as="font", crossorigin="anonymous")
     link(rel="preload", href="fonts/chakra-petch-semibold.woff2", as="font", crossorigin="anonymous")
     link(rel="preload", href="fonts/chakra-petch-bold.woff2", as="font", crossorigin="anonymous")
     //- При необходимости вы можете добавить разметку Open graf. - const Open graf = true
@@ -42,6 +43,7 @@ html(lang="ru")
     link(rel="stylesheet", href="css/style.min.css")
 
   body
+    +sprite()
     .wrapper(class=wrapperMods)
       if (hasHeader)
         +header(headerMods, currentUrl)

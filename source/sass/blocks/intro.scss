@@ -8,11 +8,16 @@
 
     &__bg-wave {
         position: absolute;
-        z-index: 1;
+        z-index: -1;
+        width: size(1090px);
+        height: size(664px);
+        top: size(-449px);
+        right: size(-337px);
 
         svg {
             width: size(1090px);
-            height: size(663px);
+            height: size(664px);
+            opacity: 0.4;
         }
     }
 
@@ -20,7 +25,7 @@
         position: absolute;
         left: 0;
         z-index: -1;
-        bottom: 0;
+        bottom: size(89px);
 
         svg {
             width: size(1097px);
@@ -49,19 +54,6 @@
         margin: 0 0 size(50px) 0;
     }
 
-    &__button {
-        font-family: $ff-chakra-petch;
-        font-size: size(14px);
-        font-style: normal;
-        font-weight: 700;
-        line-height: size(14px);
-        letter-spacing: size(1.5px);
-        text-transform: uppercase;
-        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
-        padding: size(18px) size(38px);
-        cursor: pointer;
-    }
-
     &__happy-client {
         margin: size(60px) 0 0 0;
     }
@@ -70,5 +62,20 @@
         align-self: flex-end;
         min-width: size(526px);
         height: size(626px);
+    }
+
+    &__bg-blur {
+        position: absolute;
+        z-index: -1;
+        width: size(987px);
+        height: size(760px);
+        top: size(36px);
+        right: size(-169px);
+
+        svg {
+            width: size(987px);
+            height: size(760px);
+            opacity: 0.6;
+        }
     }
 }

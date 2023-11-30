@@ -21,6 +21,12 @@
     line-height: size(28px);
     color: $color-default-white;
 
+    text-transform: inherit;
+    background: transparent;
+    pointer-events: all;
+    padding: 0;
+    user-select: auto;
+
     &.is-active {
       opacity: 0.6;
     }
@@ -41,5 +47,6 @@
     border: 1px solid $color-deep-sky-blue;
     border-image: linear-gradient(to right, $color-deep-sky-blue, $color-free-speech-magenta);
     border-image-slice: 1;
+    user-select: none;
   }
 }

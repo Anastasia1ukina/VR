@@ -1,0 +1,95 @@
+-
+  const users = {
+    "about": {
+      img: {
+        path: "content",
+        image: "man-about",
+        format: "png",
+        width: 542,
+        height: 642,
+        altText: "Мужчина в VR очках",
+      },
+      blur: {
+        path: "content",
+        image: "bg-blur",
+        format: "png",
+        width: 1029,
+        height: 785,
+        altText: "",
+      },
+      headset: {
+        path: "content",
+        image: "vr-about",
+        format: "jpg",
+        width: 196,
+        height: 128,
+        altText: "VR очки",
+      },
+    },
+    "choose": {
+      img: {
+        path: "content",
+        image: "choose-main",
+        format: "png",
+        width: 563,
+        height: 662,
+        altText: "Мужчина в VR очках",
+      },
+      blur: {
+        path: "content",
+        image: "bg-blur",
+        format: "png",
+        width: 1029,
+        height: 785,
+        altText: "",
+      },
+      headset: {
+        path: "content",
+        image: "vr-choose",
+        format: "jpg",
+        width: 196,
+        height: 128,
+        altText: "VR очки",
+      },
+    },
+    "choose-more": {
+      img: {
+        path: "content",
+        image: "choose-more",
+        format: "png",
+        width: 500,
+        height: 574,
+        altText: "Мужчина в VR очках",
+      },
+      blur: {
+        path: "content",
+        image: "bg-blur",
+        format: "png",
+        width: 1029,
+        height: 785,
+        altText: "",
+      },
+      headset: {
+        path: "content",
+        image: "vr-about",
+        format: "jpg",
+        width: 196,
+        height: 128,
+        altText: "VR очки",
+      },
+    },
+  }
+
+mixin user(options = {})
+  - const data = options.clusterId
+  - const classMods = options.cardType ? `user--${options.cardType}` : false;
+  - const userpicClassMod = data.userpicSize ? `user__icon--up${data.userpicSize}` : false
+
+  .user(class = classMods)&attributes(attributes)
+    .user__wrapper
+        .user__wrapper-img(class = userpicClassMod)
+            +img(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, data.img.altText)
+            .user__bg-blur(class = userpicClassMod)
+                +img(data.blur.path, data.blur.image, data.blur.format, data.blur.width, data.blur.height, data.blur.altText)
+            .user__headset(class = userpicClassMod)
+                +img(data.headset.path, data.headset.image, data.headset.format, data.headset.width, data.headset.height, data.headset.altText)

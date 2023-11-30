@@ -1,20 +1,22 @@
 mixin intro()
   section.intro
     .container
-      //- .intro__bg-wave
-      //-   +icon("bg-intro-wave", "736", "353")
+      .intro__bg-wave
+        +icon("icon-bg-intro-wave", "736", "353", true)
       .intro__bg-lines
-        +icon("bg-intro-lines", "1097", "721")
+        +icon("icon-bg-intro-lines", "1097", "721")
       .intro__wrapper
         .intro__text
           h1.intro__title Immerse Yourself in Virtual Reality
           p.intro__description 
             | Experience Unforgettable Events in VR. 
             | Bring your events to life like never before with our VR services
-          a.intro__button discover more
+          +btn({text: "discover more", href: "#", isExternal: true}).btn.intro__button
           .intro__happy-client
             +img("content", "intro-mini-image", "jpg", 196, 128, "Мужчина в очках с камерой")
         .intro__wrapper-img
           +img("content", "man-intro", "png", 526, 626, "Мужчина в VR очках")
+          .intro__bg-blur
+            +img("content", "bg-blur", "png", 875, 760, "") 
       +capabilities()
 

@@ -1,3 +1,18 @@
 mixin about-us()
   section.about-us
     .container
+      .about-us__wrapper
+        +user({clusterId: users["about"]})
+        .about-us__text 
+          p.about-us__intro About us
+          h2.about-us__title Bring your events to life like never before with our VR services.
+          p.about-us__description 
+            | VRNas is a leading provider of VR services for education, 
+            | entertainment, architecture, and events. Our mission is to 
+            | bring the power of virtual reality to everyone, allowing them to explore new worlds, 
+            | learn in new ways, and experience events in a whole new light.
+          ul.about-us__list 
+            li.about-us__item Cutting-Edge Technology
+            li.about-us__item Versatile Applications
+            li.about-us__item Affordable and Accessible
+          +btn({text: "read more", href: "#", isExternal: true}).about-us__button

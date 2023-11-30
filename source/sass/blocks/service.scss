@@ -1,0 +1,54 @@
+.service {
+    margin-top: size(150px);
+
+    &__wrapper-text {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__intro {
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: size(2.24px);
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: table;
+        margin: 0;
+    }
+
+    &__title {
+        font-family: $ff-chakra-petch;
+        font-size: size(48px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(58px);
+        letter-spacing: size(-0.24px);
+        margin: size(12px) 0;
+    }
+
+    &__description {
+        color: $color-light-grey;
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: size(28px);
+        margin: 0 0 size(24px) 0;
+        width: size(625px);
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}

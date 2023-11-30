@@ -40,10 +40,15 @@ const optimizePng = () =>
             })]))
       .pipe(gulp.dest('build/img'));
 
+  //Optional tasks
+const spriteGradient = () =>
+  gulp
+      .src('source/img/sprite/gradient/*.svg')
+      .pipe(svgstore({inlineSvg: true}))
+      .pipe(rename('sprite-gradient.svg'))
+      .pipe(gulp.dest('build/img'));
+  
 /*
-  Optional tasks
-  ---------------------------------
-
   Используйте отличное от дефолтного значение root, если нужно обработать отдельную папку в img,
   а не все изображения в img во всех папках.
 
@@ -67,4 +72,4 @@ const createAvif = () => {
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
-export {sprite, createWebp, createAvif, optimizeSvg, optimizePng, optimizeJpg};
+export {sprite, spriteGradient, createWebp, createAvif, optimizeSvg, optimizePng, optimizeJpg};

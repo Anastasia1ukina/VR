@@ -1,0 +1,36 @@
+.user {
+    align-self: flex-end;
+
+    &__wrapper-img {
+        position: relative;
+    }
+
+    &__bg-blur {
+        position: absolute;
+        z-index: -1;
+        width: size(1029px);
+        height: size(785px);
+        top: size(-77px);
+        left: size(-276px);
+
+        svg {
+            width: size(1029px);
+            height: size(785px);
+            opacity: 0.6;
+        }
+    }
+
+    &__headset {
+        position: absolute;
+        z-index: 2;
+        width: size(196px);
+        height: size(128px);
+        bottom: size(-20px);
+        right: size(-1px);
+
+        svg {
+            width: size(196px);
+            height: size(128px);
+        }
+    }
+}
