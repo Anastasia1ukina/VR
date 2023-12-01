@@ -1,1 +1,80 @@
-.footer {}
+.footer {
+    margin-top: size(150px);
+
+    form {
+        align-self: center;
+    }
+
+    &__subscription {
+        display: flex;
+        justify-content: space-between;
+        padding: size(38px) size(77px) size(31px) size(74px);
+        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
+    }
+
+    &__title {
+        font-family: $ff-chakra-petch;
+        font-size: size(40px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(58px);
+        letter-spacing: size(-0.2px);
+        margin: 0;
+        width: size(520px);
+    }
+
+    &__wrapper {
+        margin-top: size(182px);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list-social {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: size(139px);
+    }
+
+    &__contacts-item {
+        margin-right: size(20px);
+    }
+
+    &__list-quicklinks {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        margin-bottom: size(16px);
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: size(28px);
+
+        &--first {
+            font-family: $ff-chakra-petch;
+            font-size: size(16px);
+            font-style: normal;
+            font-weight: 600;
+            line-height: size(28px);
+        }
+    }
+
+    &__list-support {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__list-help {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}

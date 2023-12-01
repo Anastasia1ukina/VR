@@ -1,3 +1,57 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
+      .footer__subscription
+        h2.footer__title Subscribe to our newsletter for latest updates
+        form
+          .footer__email
+            label(for="emailAddress")
+            input(id="emailAddress" type="email" placeholder="Enter your email address")
+          button(type='submit' value='Send Request')
+      .footer__wrapper
+        ul.footer__list-social 
+          li.footer__item-logo 
+            a.footer__logo(href="#intro", data-move-to="intro", aria-label="Переход к началу страницы")
+              +icon("icon-logo", "101", "30", true)
+          li.footer__contacts 
+              a(href="#" target="_blank", rel="nofollow noopener noreferrer").footer__contacts-item
+                +icon("icon-twitter", "46", "46", true)
+              a(href="#" target="_blank", rel="nofollow noopener noreferrer").footer__contacts-item
+                +icon("icon-facebook", "46", "46", true)
+              a(href="#" target="_blank", rel="nofollow noopener noreferrer").footer__contacts-item
+                +icon("icon-instagram", "46", "46", true)
+              a(href="#" target="_blank", rel="nofollow noopener noreferrer").footer__contacts-item
+                +icon("icon-github", "46", "46", true)
+        ul.footer__list-quicklinks
+          li.footer__item.footer__item--first 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") Quicklinks
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") Home
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") Pricing Plan
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") Service
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") Blog
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") Our Team
+        ul.footer__list-support
+          li.footer__item.footer__item--first Support
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") About us
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") Contact us
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") FAQ
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") Tems & Conditions
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") Privacy Policy
+        ul.footer__list-help
+          li.footer__item.footer__item--first Need Help?
+          li.footer__item 
+            a(href="#" target="_blank", rel="nofollow noopener noreferrer") Tanjung Sari Street no.48, Pontianak City
+          li.footer__item 
+            a(href="mailto:Support@VRNas.com" target="_blank", rel="nofollow noopener noreferrer") Support@VRNas.com
+          li.footer__item 
+            a(href="tel:+1234567890" target="_blank", rel="nofollow noopener noreferrer") +123 456 7890

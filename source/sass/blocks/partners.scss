@@ -1,0 +1,75 @@
+.partners {
+    text-align: center;
+
+    &__intro {
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: size(2.24px);
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: table;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-family: $ff-chakra-petch;
+        font-size: size(48px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(58px);
+        letter-spacing: size(-0.24px);
+        margin: size(12px) 0 size(58px) 0;
+    }
+
+    &__img {
+        margin: 0 auto;
+        width: size(1055px);
+        height: size(741px);
+        position: relative;
+    }
+
+    &__img-item {
+        position: absolute;
+
+        &--1 {
+            bottom: size(210px);
+            left: size(13px);
+        }
+
+        &--2 {
+            bottom: size(380px);
+            left: size(72px);
+        }
+
+        &--3 {
+            top: size(81px);
+            left: size(242px);
+        }
+
+        &--4 {
+            top: size(17px);
+            left: size(461px);
+        }
+
+        &--5 {
+            top: size(81px);
+            right: (267px);
+        }
+
+        &--6 {
+            bottom: size(380px);
+            right: size(85px);
+        }
+
+        &--7 {
+            bottom: size(210px);
+            right: size(38px);
+        }
+    }
+}
