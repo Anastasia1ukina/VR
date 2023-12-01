@@ -24,7 +24,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: table;
-        margin: 0;
     }
 
     &__title {
@@ -45,6 +44,10 @@
         font-weight: 300;
         line-height: size(28px);
         margin: 0 0 size(24px) 0;
+
+        p {
+            margin: 0;
+        }
     }
 
     &__list {

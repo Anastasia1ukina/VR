@@ -8,10 +8,11 @@ mixin intro()
       .intro__wrapper
         .intro__text
           h1.intro__title Immerse Yourself in Virtual Reality
-          p.intro__description 
-            | Experience Unforgettable Events in VR. 
-            | Bring your events to life like never before with our VR services
-          +btn({text: "discover more", href: "#", isExternal: true}).btn.intro__button
+          .intro__description
+            p 
+              | Experience Unforgettable Events in VR. 
+              | Bring your events to life like never before with our VR services
+          +btn({text: "discover more", href: "#", isExternal: true}).intro__button
           .intro__happy-client
             +img("content", "intro-mini-image", "jpg", 196, 128, "Мужчина в очках с камерой")
         .intro__wrapper-img

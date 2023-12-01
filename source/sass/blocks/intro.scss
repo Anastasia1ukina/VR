@@ -52,6 +52,10 @@
         color: $color-light-grey;
         width: size(446px);
         margin: 0 0 size(50px) 0;
+
+        p {
+            margin: 0;
+        }
     }
 
     &__happy-client {

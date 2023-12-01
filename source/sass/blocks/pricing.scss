@@ -1,0 +1,172 @@
+.pricing {
+    margin-top: size(150px);
+    margin-bottom: size(198px);
+    position: relative;
+
+    &__blur {
+        position: absolute;
+        right: size(-64px);
+        top: size(124px);
+    }
+
+    &__intro {
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: size(2.24px);
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: table;
+    }
+
+    &__title {
+        font-family: $ff-chakra-petch;
+        font-size: size(48px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(58px);
+        letter-spacing: size(-0.24px);
+        margin: size(12px) 0;
+    }
+
+    &__description {
+        color: $color-light-grey;
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: size(28px);
+        margin: 0 0 size(24px) 0;
+        width: size(625px);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: size(640px);
+        position: relative;
+    }
+
+    &__list::after {
+        background-color: rgba(255, 255, 255, 0.1);
+        content: "";
+        height: calc(100% - size(110px));
+        position: absolute;
+        right: size(-111px);
+        top: 0;
+        width: size(1px);
+    }
+
+    &__wrapper {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        background-color: rgba(37, 37, 50, 0.81);
+        padding: size(55px) 0 0 size(42px);
+        border: size(1px) solid rgba(255, 255, 255, 0.7);
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), $color-jaguar);
+        border-image-slice: 1;
+    }
+
+    &__item {
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: size(28px);
+        margin: 0 0 size(32px) 0;
+
+        background-image: url("../../img/svg/checkbox-pricing.svg");
+        background-position: inherit;
+        background-repeat: no-repeat;
+        padding-left: size(58px);
+    }
+
+    &__item-title {
+        font-family: $ff-chakra-petch;
+        font-size: size(18px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0 0 size(12px) 0;
+    }
+
+    &__text {
+        color: $color-light-grey;
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: size(28px);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__img {
+        align-self: flex-end;
+        width: size(360px);
+        height: size(520px);
+    }
+
+    &__block {
+        position: absolute;
+        border: size(1px) solid $color-deep-sky-blue;
+        border-image: linear-gradient(to right, $color-deep-sky-blue, $color-free-speech-magenta);
+        border-image-slice: 1;
+        background-color: $color-jaguar;
+        width: size(321px);
+        height: size(222px);
+        display: block;
+        padding: size(18px) size(68px) size(18px) size(68px);
+        text-align: center;
+        bottom: size(-47px);
+        right: size(190px);
+    }
+
+    &__from {
+        color: $color-light-grey;
+        font-family: $ff-chakra-petch;
+        font-size: size(14px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: size(20px);
+    }
+
+    &__price {
+        font-family: $ff-chakra-petch;
+        font-size: size(60px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(66px);
+        margin: 0 0 size(12px) 0;
+    }
+
+    &__button {
+        display: table;
+        margin: 0 0 size(12px) 0;
+    }
+
+    &__guarantee {
+        color: $color-spun-pearl;
+        font-family: $ff-chakra-petch;
+        font-size: size(12px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: size(20px);
+    }
+}

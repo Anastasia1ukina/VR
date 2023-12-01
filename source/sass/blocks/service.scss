@@ -22,7 +22,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: table;
-        margin: 0;
     }
 
     &__title {
@@ -44,6 +43,10 @@
         line-height: size(28px);
         margin: 0 0 size(24px) 0;
         width: size(625px);
+
+        p {
+            margin: 0;
+        }
     }
 
     &__list {

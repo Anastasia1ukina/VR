@@ -24,7 +24,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: table;
-        margin: 0;
     }
 
     &__title {
@@ -72,6 +71,10 @@
 
         &--first {
             display: block;
+        }
+
+        p {
+            margin: 0;
         }
     }
 }

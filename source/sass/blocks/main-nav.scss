@@ -44,7 +44,7 @@
   &__contact {
     align-self: center;
     padding: size(12px) size(24px);
-    border: 1px solid $color-deep-sky-blue;
+    border: size(1px) solid $color-deep-sky-blue;
     border-image: linear-gradient(to right, $color-deep-sky-blue, $color-free-speech-magenta);
     border-image-slice: 1;
     user-select: none;
