@@ -1,0 +1,14 @@
+mixin intro-about()
+  section.intro-about
+    .container
+      .intro-about__bg-wave
+        +icon("icon-bg-intro-wave", "736", "353", true)
+      .intro-about__wrapper
+        .intro-about__bg-blur
+            +img("content", "blur-intro-about", "png", 669, 367, "")
+        h1.intro-about__title About Us
+        ul.intro-about__breadcrumb
+            li.intro-about__item
+                a(href="#index.html").intro-about__link Home 
+            li.intro-about__item
+                span(href="#").intro-about__link.current About us

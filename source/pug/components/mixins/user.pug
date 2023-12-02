@@ -82,7 +82,7 @@
 
 mixin user(options = {})
   - const data = options.clusterId
-  - const classMods = options.cardType ? `user--${options.cardType}` : false;
+  - const classMods = options.class ? options.class : '';
   - const userpicClassMod = data.userpicSize ? `user__icon--up${data.userpicSize}` : false
 
   .user(class = classMods)&attributes(attributes)

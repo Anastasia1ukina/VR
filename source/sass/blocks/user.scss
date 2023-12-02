@@ -28,9 +28,13 @@
         bottom: size(-20px);
         right: size(-1px);
 
-        svg {
+        img {
             width: size(196px);
             height: size(128px);
         }
+    }
+
+    &.animation {
+        transform: translateX(-100%);
     }
 }

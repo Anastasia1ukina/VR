@@ -1,0 +1,76 @@
+-
+  const services = {
+    "development": {
+      icon: {
+        name: "service-1",
+        width: "48",
+        height: "48",
+        gradient: true,
+      },
+      title: "VR Development",
+      text: ["From concept to creation, our team of VR developers will bring your vision to life."],
+    },
+    "design": {
+      icon: {
+        name: "service-2",
+        width: "48",
+        height: "48",
+        gradient: true,
+      },
+      title: "VR Design",
+      text: ["Our talented VR designers will create immersive and engaging environments that will captivate your audience."],
+    },
+    "consulting": {
+      icon: {
+        name: "service-3",
+        width: "48",
+        height: "48",
+        gradient: true,
+      },
+      title: "VR Consulting",
+      text: ["Our VR consultants will work with you to ensure that your VR experience meets your goals and exceeds your expectations."],
+    },
+    "games": {
+      icon: {
+        name: "service-4",
+        width: "48",
+        height: "48",
+        gradient: true,
+      },
+      title: "VR Games",
+      text: ["We offer a wide selection of VR games that are suitable for players of all ages and skill levels."],
+    },
+    "events": {
+      icon: {
+        name: "service-5",
+        width: "48",
+        height: "48",
+        gradient: true,
+      },
+      title: "VR Events",
+      text: ["Make your next event unforgettable with our VR event services."],
+    },
+    "entertainment": {
+      icon: {
+        name: "service-6",
+        width: "48",
+        height: "48",
+        gradient: true,
+      },
+      title: "VR Entertainment",
+      text: ["reate a VR escape room, or offer VR experiences at a theme park, we have the expertise and experience to make it happen."],
+    },
+  }
+
+mixin services(options = {})
+  - const data = options.clusterId
+  - const classMods = options.cardType ? `services--${options.cardType}` : false;
+  - const servicespicClassMod = data.servicespicSize ? `services__icon--up${data.servicespicSize}` : false
+
+    .services__icon(class = servicespicClassMod)
+        +icon(data.icon.name, data.icon.width, data.icon.height, data.icon.gradient)
+    +title({text: data.title, classMods: ["h3"]}).services__title
+    .services__descript
+        +text({text: data.text, classMods: ["p2"]})
+    
+

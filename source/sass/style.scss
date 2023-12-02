@@ -11,6 +11,7 @@
 @import "variables";
 @import "mixins";
 @import "functions";
+@import "keyframes";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
@@ -37,6 +38,9 @@
 @import "blocks/get-started";
 @import "blocks/pricing";
 @import "blocks/partners";
+@import "blocks/intro-about";
+@import "blocks/choose-about";
+@import "blocks/team";
 
 // ---------------------------------
 

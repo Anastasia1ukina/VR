@@ -1,38 +1,26 @@
 mixin header(headerMods, currentUrl)
-  -
-    const headerLinks = [
-      {
-        href: "home",
-        text: "Home",
-      },
-      {
-        href: "about us",
-        text: "About us",
-      },
-      {
-        href: "service",
-        text: "Service",
-      },
-      {
-        href: "pricing plan",
-        text: "Pricing Plan",
-      },
-      {
-        href: "blog",
-        text: "Blog",
-      },
-    ]
-
-  header.header.header--dark(class=headerMods)
+  header.header(class=headerMods)
     .container
 
-      a.header__logo(href="#intro", data-move-to="intro", aria-label="Переход к началу страницы")
+      a.header__logo(href="index.html", data-move-to="intro", aria-label="Переход к началу страницы")
         +icon("icon-logo", "101", "30", true)
 
       nav.main-nav
         .main-nav__wrapper
           ul.main-nav__list
-            each link in headerLinks
-              li.main-nav__item
-                +btn({text: link.text, href: "#"+link.href, scrollTo: link.href, isFilling: true}).main-nav__link
+            li.main-nav__item
+              a.main-nav__link(href="index.html#home")
+                span Home
+            li.main-nav__item
+              a.main-nav__link(href="about-us.html#about-us")
+                span About us
+            li.main-nav__item
+              a.main-nav__link(href="index.html#service")
+                span Service
+            li.main-nav__item
+              a.main-nav__link(href="index.html#pricing-plan")
+                span Pricing Plan
+            li.main-nav__item
+              a.main-nav__link(href="blog.html#Blog")
+                span Blog
           a.main-nav__contact(href="#") Contact us

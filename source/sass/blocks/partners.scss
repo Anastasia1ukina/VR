@@ -9,7 +9,7 @@
         line-height: normal;
         letter-spacing: size(2.24px);
         text-transform: uppercase;
-        background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -36,40 +36,66 @@
 
     &__img-item {
         position: absolute;
+        z-index: 1;
+        width: size(102px);
+        height: size(102px);
+        align-items: center;
+        display: flex;
+        justify-content: center;
 
         &--1 {
             bottom: size(210px);
             left: size(13px);
+            animation: scale ease-in-out 7s infinite alternate;
         }
 
         &--2 {
             bottom: size(380px);
             left: size(72px);
+            animation: scale ease-in-out 5s infinite alternate;
         }
 
         &--3 {
             top: size(81px);
             left: size(242px);
+            animation: scale ease-in-out 6s infinite alternate;
         }
 
         &--4 {
             top: size(17px);
             left: size(461px);
+            animation: scale ease-in-out 5s infinite alternate;
         }
 
         &--5 {
             top: size(81px);
             right: (267px);
+            animation: scale ease-in-out 7s infinite alternate;
         }
 
         &--6 {
             bottom: size(380px);
             right: size(85px);
+            animation: scale ease-in-out 5s infinite alternate;
         }
 
         &--7 {
             bottom: size(210px);
             right: size(38px);
+            animation: scale ease-in-out 6s infinite alternate;
         }
+    }
+
+    &__circle {
+        background-color: $color-jaguar;
+        opacity: 0.8;
+        width: size(102px);
+        height: size(102px);
+        border-radius: 50%;
+        border: size(1px) solid rgba(255, 255, 255, 0.7);
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), $color-jaguar);
+        border-image-slice: 1;
+        position: absolute;
+        z-index: -1;
     }
 }

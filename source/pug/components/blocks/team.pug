@@ -1,0 +1,27 @@
+mixin team()
+  section.team(id="team")
+    .container
+        span.choose-about__intro OUR TEAM
+        h2.team__title Our Professionals Team
+        .team__wrapper.team__swiper.swiper
+            .team__list.swiper-wrapper
+                .team__item.swiper-slide
+                    .team__photo
+                        +img("slides", "team-1", "jpg", 275, 370, "Bondan Prabowo")
+                    +title({text: "Bondan Prabowo", classMods: ["h4"]}).team__title-descript
+                    +text({text: "CEO", classMods: ["p2"]}).team__description
+                .team__item.swiper-slide
+                    .team__photo
+                        +img("slides", "team-2", "jpg", 275, 370, "Bayu Aji")
+                    +title({text: "Bayu Aji", classMods: ["h4"]}).team__title-descript
+                    +text({text: "VR Development", classMods: ["p2"]}).team__description
+                .team__item.swiper-slide
+                    .team__photo
+                        +img("slides", "team-3", "jpg", 275, 370, "Agung Brandon")
+                    +title({text: "Agung Brandon", classMods: ["h4"]}).team__title-descript
+                    +text({text: "VR Artist", classMods: ["p2"]}).team__description
+                .team__item.swiper-slide
+                    .team__photo
+                        +img("slides", "team-4", "jpg", 275, 370, "Aril Laso")
+                    +title({text: "Aril Laso", classMods: ["h4"]}).team__title-descript
+                    +text({text: "UI / UX Designer", classMods: ["p2"]}).team__description

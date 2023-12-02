@@ -17,7 +17,7 @@
         line-height: normal;
         letter-spacing: size(2.24px);
         text-transform: uppercase;
-        background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -53,5 +53,31 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: size(32px) 0;
+        justify-content: space-between;
+        margin-top: size(46px);
+        position: relative;
+    }
+
+    &__item {
+        background-color: $color-jaguar;
+        padding: size(38px) size(39px) size(25px) size(32px);
+        border: size(1px) solid rgba(255, 255, 255, 0.6);
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), $color-jaguar);
+        border-image-slice: 1;
+
+        cursor: pointer;
+        flex-basis: calc(33.33% - size(15px));
+        position: relative;
+
+        &--second {
+            top: size(57px);
+        }
+
+        &--third {
+            top: size(135px);
+        }
     }
 }

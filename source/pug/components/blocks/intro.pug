@@ -1,5 +1,5 @@
 mixin intro()
-  section.intro
+  section.intro(id="intro")
     .container
       .intro__bg-wave
         +icon("icon-bg-intro-wave", "736", "353", true)
@@ -17,7 +17,7 @@ mixin intro()
             +img("content", "intro-mini-image", "jpg", 196, 128, "Мужчина в очках с камерой")
         .intro__wrapper-img
           +img("content", "man-intro", "png", 526, 626, "Мужчина в VR очках")
-          .intro__bg-blur
-            +img("content", "bg-blur", "png", 875, 760, "") 
+      .intro__bg-blur
+        +img("content", "bg-blur", "png", 875, 760, "") 
       +capabilities()
 

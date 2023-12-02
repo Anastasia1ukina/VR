@@ -4,6 +4,9 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import { initFeedback } from './modules/init-feedback.js';
+import Swiper from 'swiper/swiper-bundle.js';
+import { scrollAnimation } from './modules/animations/scroll';
+import './modules/animations/blur-header';
 
 // ---------------------------------
 
@@ -15,7 +18,21 @@ window.addEventListener('DOMContentLoaded', () => {
   mobileVhFix();
 
   // Modules
-  // ---------------------------------
+  (() =>
+  new Swiper('.team__wrapper', {
+    slidesPerView: 4,
+    initialSlide: 0,
+    spaceBetween: 9,
+    loop: true,
+
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+    },
+  })
+)();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -30,6 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initFeedback();
   });
+  scrollAnimation();
 });
 
 // ---------------------------------

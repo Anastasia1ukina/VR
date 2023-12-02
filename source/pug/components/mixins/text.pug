@@ -1,0 +1,7 @@
+mixin text(options = {})
+  - const text = options.text || "";
+
+  p&attributes(attributes)
+    | !{text}
+    if block
+      block
