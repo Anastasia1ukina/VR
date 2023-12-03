@@ -13,6 +13,13 @@
         border-image-slice: 1;
     }
 
+    &__item {
+        svg {
+            width: size(70px);
+            height: size(70px);
+        }
+    }
+
     &__list-title {
         margin: size(42px) 0 size(12px) 0;
         font-family: $ff-chakra-petch;

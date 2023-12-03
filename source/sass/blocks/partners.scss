@@ -32,6 +32,10 @@
         width: size(1055px);
         height: size(741px);
         position: relative;
+
+        img {
+            width: size(1055px);
+        }
     }
 
     &__img-item {

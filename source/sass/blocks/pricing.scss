@@ -121,6 +121,11 @@
         align-self: flex-end;
         width: size(360px);
         height: size(520px);
+
+        img {
+            width: size(360px);
+            height: size(520px);
+        }
     }
 
     &__block {

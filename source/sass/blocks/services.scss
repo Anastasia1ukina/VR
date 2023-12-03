@@ -1,0 +1,32 @@
+.services {
+    &__title {
+        font-family: $ff-chakra-petch;
+        font-size: size(20px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__descript {
+        color: $color-spun-pearl;
+        font-family: $ff-chakra-petch;
+        font-size: size(14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: size(28px);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__icon {
+        width: size(48px);
+        height: size(48px);
+
+        svg {
+            width: size(48px);
+            height: size(48px);
+        }
+    }
+}

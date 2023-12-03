@@ -1,12 +1,12 @@
-.get-started {
-    text-align: center;
-    margin-top: size(150px);
-    position: relative;
+.about-us2 {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
 
-    &__img {
-        position: absolute;
-        top: size(-151px);
-        left: size(-327px);
+    &__text {
+        width: size(625px);
+        align-self: flex-end;
     }
 
     &__intro {
@@ -22,7 +22,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: table;
-        margin: 0 auto;
     }
 
     &__title {
@@ -32,18 +31,20 @@
         font-weight: 600;
         line-height: size(58px);
         letter-spacing: size(-0.24px);
-        margin: size(12px) auto;
-        width: size(802px);
+        margin: size(12px) 0;
     }
 
-    &__video {
-        margin-bottom: size(50px);
-        width: size(1200px);
-        height: size(522px);
+    &__description {
+        color: $color-light-grey;
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: size(28px);
+        margin: 0 0 size(24px) 0;
 
-        video {
-            width: size(1200px);
-            height: size(522px);
+        p {
+            margin: 0;
         }
     }
 }

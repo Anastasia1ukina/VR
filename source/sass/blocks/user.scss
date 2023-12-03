@@ -1,8 +1,29 @@
 .user {
     align-self: flex-end;
 
-    &__wrapper-img {
+    &__wrapper {
         position: relative;
+    }
+
+    &__wrapper-img {
+
+        width: size(500px);
+        height: size(574px);
+
+        img {
+            width: size(500px);
+            height: size(574px);
+        }
+
+        &--about2 {
+            width: size(417px);
+            height: size(574px);
+    
+            img {
+                width: size(417px);
+                height: size(574px);
+            }
+        }
     }
 
     &__bg-blur {
@@ -31,6 +52,11 @@
         img {
             width: size(196px);
             height: size(128px);
+        }
+
+        &--about2 {
+            left: size(-80px);
+            bottom: size(-59px);
         }
     }
 

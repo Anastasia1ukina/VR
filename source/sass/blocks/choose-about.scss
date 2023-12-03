@@ -1,4 +1,19 @@
 .choose-about {
+    margin-top: size(210px);
+    position: relative;
+
+    &__bg-lines {
+        position: absolute;
+        left: size(-4px);
+        z-index: -1;
+        bottom: size(192px);
+
+        svg {
+            width: size(990px);
+            height: size(721px);
+        }
+    }
+
     &__intro {
         font-family: $ff-chakra-petch;
         font-size: size(16px);
