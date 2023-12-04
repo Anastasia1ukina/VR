@@ -1,5 +1,5 @@
-.about-us {
-    margin-top: size(120px);
+.choose-about2 {
+    margin-top: size(285px);
 
     &__wrapper {
         display: flex;
@@ -33,21 +33,7 @@
         font-weight: 600;
         line-height: size(58px);
         letter-spacing: size(-0.24px);
-        margin: size(12px) 0;
-    }
-
-    &__description {
-        color: $color-light-grey;
-        font-family: $ff-chakra-petch;
-        font-size: size(16px);
-        font-style: normal;
-        font-weight: 300;
-        line-height: size(28px);
-        margin: 0 0 size(24px) 0;
-
-        p {
-            margin: 0;
-        }
+        margin: size(12px) 0 0 0;
     }
 
     &__list {
@@ -56,23 +42,39 @@
         padding: 0;
     }
 
-    &__item {
+    &__title-menu {
+        font-family: $ff-chakra-petch;
+        font-size: size(20px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0;
+    }
+
+    &__trigger {
+        display: flex;
+        justify-content: space-between;
+        padding: size(48px) 0 size(12px) 0;
+        border-bottom: size(1px) solid rgba(255, 255, 255, 0.35);
+    }
+
+    &__content {
+        color: $color-light-grey;
         font-family: $ff-chakra-petch;
         font-size: size(16px);
         font-style: normal;
         font-weight: 400;
         line-height: size(28px);
-        margin-bottom: size(14px);
+        margin: 0;
+        padding: size(12px) 0 0 0;
+        display: none;
 
-        background-image: url("../../img/svg/checkbox.svg");
-        background-position: 0;
-        background-repeat: no-repeat;
-        padding-left: size(28px);
-    }
+        &--first {
+            display: block;
+        }
 
-    &__button {
-        margin-top: size(23px);
-        position: relative;
-        z-index: 1;
+        p {
+            margin: 0;
+        }
     }
 }

@@ -1,13 +1,18 @@
 mixin footer(footerMods)
-  footer.footer(class=footerMods)
+  footer.footer(class=footerMods id="contacts")
     .container
+      .footer__bg-wave
+        +icon("icon-bg-footer-wave", "736", "353", true)
       .footer__subscription
         h2.footer__title Subscribe to our newsletter for latest updates
-        form
+        form(action="#" method="POST")
+          .footer__message
+            +icon("icon-message", "24", "24")
           .footer__email
-            label(for="emailAddress")
-            input(id="emailAddress" type="email" placeholder="Enter your email address")
-          button(type='submit' value='Send Request')
+            label(for="email-address").visually-hidden
+            input(id="email-address" name="email-address" type="email" placeholder="Enter your email address" value="")
+          button(type='submit' value='Send Request').footer__btn-form
+            +icon("icon-message-btn", "16", "16")
       .footer__wrapper
         ul.footer__list-social 
           li.footer__item-logo 
@@ -55,3 +60,4 @@ mixin footer(footerMods)
             a(href="mailto:Support@VRNas.com" target="_blank", rel="nofollow noopener noreferrer") Support@VRNas.com
           li.footer__item 
             a(href="tel:+1234567890" target="_blank", rel="nofollow noopener noreferrer") +123 456 7890
+      .footer__copyright © Copyright 2023, All Rights Reserved

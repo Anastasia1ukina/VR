@@ -10,14 +10,14 @@
     &__bg-wave {
         position: absolute;
         z-index: -1;
-        width: size(1090px);
-        height: size(664px);
-        top: size(-390px);
-        right: size(-337px);
+        width: size(736px);
+        height: size(353px);
+        top: 0;
+        right: 0;
 
         svg {
-            width: size(1090px);
-            height: size(664px);
+            width: size(736px);
+            height: size(353px);
             opacity: 0.4;
         }
     }
@@ -61,29 +61,36 @@
 
     &__happy-client {
         margin: size(60px) 0 0 0;
+
+        img {
+            width: size(196px);
+            height: size(128px);
+        }
     }
 
     &__wrapper-img {
         align-self: flex-end;
-        max-width: size(526px);
+        width: size(526px);
+        max-width: inherit;
         height: size(626px);
 
         img {
-            max-width: size(526px);
+            width: size(526px);
             height: size(626px);
+            max-width: inherit;
         }
     }
 
     &__bg-blur {
         position: absolute;
         z-index: -1;
-        width: size(987px);
+        width: size(875px);
         height: size(760px);
         top: size(36px);
         right: size(-169px);
 
-        svg {
-            width: size(987px);
+        img {
+            width: size(875px);
             height: size(760px);
             opacity: 0.6;
         }

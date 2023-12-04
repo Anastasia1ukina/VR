@@ -34,6 +34,11 @@
         top: size(-130px);
         left: size(285px);
         z-index: -1;
+
+        img {
+            width: size(669px);
+            height: size(367px);
+        }
     }
 
     &__title {
@@ -61,6 +66,9 @@
     &__item:not(:last-child):after {
         content: url("../../img/svg/arrow-breadcrumbs.svg");
         margin-left: 5px;
+        display: inline-block;
+        width: size(18px);
+        height: size(19px);
     }
 
     &__link {

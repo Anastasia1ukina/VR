@@ -5,6 +5,11 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        margin: size(58px) 0 size(12px) 0;
+
+        p {
+            margin: 0;
+        }
     }
 
     &__descript {

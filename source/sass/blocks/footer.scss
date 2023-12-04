@@ -1,8 +1,64 @@
 .footer {
     margin-top: size(150px);
+    position: relative;
 
     form {
         align-self: center;
+        flex: 0 1 size(365px);
+        position: relative;
+    }
+
+    &__message {
+        left: size(15px);
+        position: absolute;
+        top: calc(50% - size(12px));
+
+        svg {
+            height: size(24px);
+            width: size(24px);
+        }
+    }
+
+    &__email {
+        input {
+            background-color: rgba(255, 255, 255, 0.07);
+            color: $color-default-white;
+            padding: size(14px) size(60px) size(14px) size(48px);
+            width: 100%;
+            border: none;
+        }
+    }
+
+    &__btn-form {
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.21);
+        display: flex;
+        height: calc(100% - size(7px));
+        justify-content: center;
+        position: absolute;
+        right: size(3px);
+        top: size(3px);
+        width: size(50px);
+        cursor: pointer;
+        border: none;
+
+        svg {
+            width: size(16px);
+            height: size(16px);
+        }
+    }
+
+    &__bg-wave {
+        position: absolute;
+        bottom: size(-15px);
+        left: 0;
+        z-index: -1;
+
+        svg {
+            width: size(1011px);
+            height: size(498px);
+            display: block;
+        }
     }
 
     &__subscription {
@@ -27,6 +83,18 @@
         margin-top: size(182px);
         display: flex;
         justify-content: space-between;
+
+        padding: 0 0 size(20px) 0;
+        border-bottom: size(1px) solid $color-deep-sky-blue;
+        border-image: linear-gradient(to right, $color-deep-sky-blue, $color-free-speech-magenta);
+        border-image-slice: 1;
+    }
+
+    &__item-logo {
+        svg {
+            width: size(101px);
+            height: size(30px);
+        }
     }
 
     &__list-social {
@@ -37,6 +105,13 @@
         display: flex;
         flex-direction: column;
         row-gap: size(139px);
+    }
+
+    &__contacts {
+        svg {
+            width: size(46px);
+            height: size(46px);
+        }
     }
 
     &__contacts-item {
@@ -77,5 +152,15 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+    }
+
+    &__copyright {
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: size(28px);
+        text-align: center;
+        margin: size(32px) 0 size(40px) 0;
     }
 }

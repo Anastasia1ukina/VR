@@ -7,6 +7,7 @@ import { initFeedback } from './modules/init-feedback.js';
 import Swiper from 'swiper/swiper-bundle.js';
 import { scrollAnimation } from './modules/animations/scroll';
 import './modules/animations/blur-header';
+import './modules/animations/scroll-btn';
 
 // ---------------------------------
 
@@ -21,16 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
   (() =>
   new Swiper('.team__wrapper', {
     slidesPerView: 4,
-    initialSlide: 0,
     spaceBetween: 9,
     loop: true,
-
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
-    },
   })
 )();
 

@@ -7,6 +7,11 @@
         position: absolute;
         right: size(-64px);
         top: size(124px);
+
+        img {
+            width: size(1246px);
+            height: size(783px);
+        }
     }
 
     &__intro {

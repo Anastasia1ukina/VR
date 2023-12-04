@@ -69,7 +69,8 @@ mixin services(options = {})
 
     .services__icon(class = servicespicClassMod)
         +icon(data.icon.name, data.icon.width, data.icon.height, data.icon.gradient)
-    +title({text: data.title, classMods: ["h3"]}).services__title
+    .services__title
+      +title({text: data.title, classMods: ["h3"]})
     .services__descript
         +text({text: data.text, classMods: ["p2"]})
     

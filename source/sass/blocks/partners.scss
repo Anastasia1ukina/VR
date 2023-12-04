@@ -47,6 +47,11 @@
         display: flex;
         justify-content: center;
 
+        svg {
+            width: size(102px);
+            height: size(102px);
+        }
+
         &--1 {
             bottom: size(210px);
             left: size(13px);
@@ -72,8 +77,8 @@
         }
 
         &--5 {
-            top: size(81px);
-            right: (267px);
+            top: size(80px);
+            left: size(679px);
             animation: scale ease-in-out 7s infinite alternate;
         }
 
@@ -88,18 +93,5 @@
             right: size(38px);
             animation: scale ease-in-out 6s infinite alternate;
         }
-    }
-
-    &__circle {
-        background-color: $color-jaguar;
-        opacity: 0.8;
-        width: size(102px);
-        height: size(102px);
-        border-radius: 50%;
-        border: size(1px) solid rgba(255, 255, 255, 0.7);
-        border-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), $color-jaguar);
-        border-image-slice: 1;
-        position: absolute;
-        z-index: -1;
     }
 }

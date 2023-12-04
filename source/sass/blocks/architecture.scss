@@ -1,0 +1,278 @@
+.architecture {
+    padding-top: size(180px);
+
+    &__breadcrumb {
+        margin: 0 0 size(53px) 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        position: relative;
+    }
+
+    &__item {
+        align-self: center;
+        margin-right: 25px;
+    }
+
+    &__item:not(:last-child):after {
+        content: url("../../img/svg/arrow-breadcrumbs.svg");
+        position: absolute;
+        margin-left: size(4px);
+        margin-top: size(-1px);
+        width: size(18px);
+        height: size(18px);
+    }
+
+    &__link {
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration: none;
+    }
+
+    &__link:not(span):hover {
+        opacity: 0.7;
+        transition: 0.4s ease opacity;
+    }
+
+    &__link.current {
+        color: $color-light-grey;
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: size(28px);
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__intro {
+        border-radius: size(16px);
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: size(2px) size(10px);
+        font-family: $ff-chakra-petch;
+        font-size: size(14px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: size(20px);
+    }
+
+    &__title {
+        margin: size(12px) 0;
+        font-family: $ff-chakra-petch;
+        font-size: size(40px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(58px);
+        letter-spacing: size(-0.2px);
+    }
+
+    &__text {
+        width: size(789px);
+    }
+
+    &__date {
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: size(2.24px);
+        text-transform: uppercase;
+        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: table;
+        margin: 0 0 size(24px) 0;
+    }
+
+    &__img {
+        width: size(789px);
+        margin: 0 0 size(30px) 0;
+
+        img {
+            width: size(789px);
+        }
+    }
+
+    &__description {
+        color: $color-light-grey;
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: size(28px);
+        margin: 0 0 size(24px) 0;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__wrapper-img {
+        display: flex;
+        margin-bottom: size(80px);
+        justify-content: space-between;
+
+        img {
+            width: size(377px);
+            height: size(252px);
+        }
+    }
+
+    &__mini-title {
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(28px);
+    }
+
+    &__tags {
+        user-select: none;
+        font-family: $ff-chakra-petch;
+        font-size: size(16px);
+        font-style: normal;
+        font-weight: 300;
+        line-height: size(28px);
+        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: table;
+        margin: size(12px) 0 size(17px) 0;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__list-contacts {
+        display: flex;
+        list-style-type: none;
+        margin: size(12px) 0 0 0;
+        padding: 0;
+        gap: size(24px);
+    }
+
+    &__item-contacts {
+
+        &--tw {
+            svg {
+                width: size(18px);
+                height: size(15px);
+            }
+        }
+
+        &--fc {
+            svg {
+                width: size(10px);
+                height: size(20px);
+            }
+        }
+
+        &--inst {
+            svg {
+                width: size(22px);
+                height: size(22px);
+            }
+        }
+    }
+
+    &__article {
+        width: size(333px);
+    }
+
+    &__title-article {
+        margin: 0;
+        font-family: $ff-chakra-petch;
+        font-size: size(20px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &__text-article span {
+        border-radius: size(16px);
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: size(2px) size(10px);
+        font-family: $ff-chakra-petch;
+        font-size: size(14px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: size(20px);
+    }
+
+    &__list-article {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__descript {
+        font-family: $ff-chakra-petch;
+        font-size: size(12px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: size(20px);
+        width: size(213.795px);
+        margin: size(6px) 0 0 0;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__item-article {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 size(24px) 0;
+        margin: size(24px) 0 0 0;
+        border-bottom: size(1px) solid rgba(255, 255, 255, 0.15);
+
+        img {
+            width: size(102px);
+            height: size(65px);
+        }
+
+        &--last {
+            border: none;
+            padding: 0;
+        }
+    }
+
+    &__title-hashtag {
+        font-family: $ff-chakra-petch;
+        font-size: size(20px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: size(65px) 0 size(24px) 0;
+    }
+
+    &__list-hashtag {
+        display: flex;
+        gap: size(12px);
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    &__item-hashtag {
+        border-radius: size(16px);
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: size(1.44px) size(7.2px);
+        font-family: $ff-chakra-petch;
+        font-size: size(10px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: size(14px);
+    }
+}
