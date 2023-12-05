@@ -7,6 +7,10 @@
         list-style-type: none;
         padding: 0;
         margin: 0;
+
+        @include vp-767 {
+            display: block;
+        }
     }
 
     &__intro {
@@ -59,6 +63,10 @@
         justify-content: space-between;
         margin-top: size(46px);
         position: relative;
+
+        @include vp-767 {
+            display: block;
+        }
     }
 
     &__item {

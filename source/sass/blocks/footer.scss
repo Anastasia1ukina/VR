@@ -66,6 +66,10 @@
         justify-content: space-between;
         padding: size(38px) size(77px) size(31px) size(74px);
         background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
+        
+        @include vp-767 {
+            display: block;
+        }
     }
 
     &__title {
@@ -88,6 +92,11 @@
         border-bottom: size(1px) solid $color-deep-sky-blue;
         border-image: linear-gradient(to right, $color-deep-sky-blue, $color-free-speech-magenta);
         border-image-slice: 1;
+
+        @include vp-767 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__item-logo {
@@ -105,6 +114,14 @@
         display: flex;
         flex-direction: column;
         row-gap: size(139px);
+
+        @include vp-767 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            flex-direction: inherit;
+        }
     }
 
     &__contacts {
@@ -123,6 +140,12 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+
+        @include vp-767 {
+            grid-column-start: 1;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
     }
 
     &__item {
@@ -146,6 +169,12 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+
+        @include vp-767 {
+            grid-column-start: 2;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
     }
 
     &__list-help {

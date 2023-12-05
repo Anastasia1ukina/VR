@@ -11,6 +11,10 @@
         border: size(1px) solid rgba(255, 255, 255, 0.7);
         border-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), $color-jaguar);
         border-image-slice: 1;
+
+        @include vp-767 {
+            display: block;
+        }
     }
 
     &__item {

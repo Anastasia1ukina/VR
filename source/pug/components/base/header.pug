@@ -5,8 +5,12 @@ mixin header(headerMods, currentUrl)
       a.header__logo(href="index.html", data-move-to="intro", aria-label="Переход к началу страницы")
         +icon("icon-logo", "101", "30", true)
 
-      nav.main-nav
+      nav.main-nav.main-nav--no-js
         .main-nav__wrapper
+          //- input(type="checkbox" id="active")
+          //- label.main-nav__toggle(for="active")
+          //-   span.main-nav__toggle-text Menu
+          //- .main-nav__clip
           ul.main-nav__list
             li.main-nav__item
               a.main-nav__link(href="index.html#home")

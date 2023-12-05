@@ -8,6 +8,7 @@ import Swiper from 'swiper/swiper-bundle.js';
 import { scrollAnimation } from './modules/animations/scroll';
 import './modules/animations/blur-header';
 import './modules/animations/scroll-btn';
+import './modules/animations/toggle';
 
 // ---------------------------------
 

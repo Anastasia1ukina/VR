@@ -4,15 +4,8 @@
   margin: 0 auto;
   padding: 0;
 
-  @include vp-1439 {
-    padding: 0;
-  }
-
-  @include vp-1023 {
-    padding: 0 24px;
-  }
-
   @include vp-767 {
+    max-width: 100vw;
     padding: 0 16px;
   }
 }
