@@ -13,6 +13,11 @@
     &__text {
         width: size(562px);
         align-self: flex-end;
+
+        @include vp-767 {
+            margin-top: size(70px);
+            width: inherit;
+        }
     }
 
     &__intro {
@@ -38,6 +43,12 @@
         line-height: size(58px);
         letter-spacing: size(-0.24px);
         margin: size(12px) 0;
+
+        @include vp-767 {
+            font-size: size(33px);
+            letter-spacing: size(0.1px);
+            line-height: size(41px);
+        }
     }
 
     &__description {

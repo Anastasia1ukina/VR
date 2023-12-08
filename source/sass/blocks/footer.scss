@@ -53,11 +53,36 @@
         bottom: size(-15px);
         left: 0;
         z-index: -1;
+        pointer-events: none;
 
         svg {
             width: size(1011px);
             height: size(498px);
             display: block;
+        }
+
+        @include vp-767 {
+            display: none;
+        }
+    }
+
+    &__bg-wave-mobile {
+        display: none;
+
+        @include vp-767 {
+            position: absolute;
+            bottom: size(-15px);
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+            display: block;
+            width: 100%;
+            height: size(314px);
+
+            svg {
+                width: 100%;
+                height: size(314px);
+            }
         }
     }
 
@@ -66,9 +91,10 @@
         justify-content: space-between;
         padding: size(38px) size(77px) size(31px) size(74px);
         background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
-        
+
         @include vp-767 {
             display: block;
+            padding: size(31px) size(13px);
         }
     }
 
@@ -81,6 +107,14 @@
         letter-spacing: size(-0.2px);
         margin: 0;
         width: size(520px);
+
+        @include vp-767 {
+            width: inherit;
+            text-align: center;
+            font-size: size(28px);
+            line-height: normal;
+            letter-spacing: size(-0.14px);
+        }
     }
 
     &__wrapper {
@@ -104,6 +138,10 @@
             width: size(101px);
             height: size(30px);
         }
+
+        @include vp-767 {
+            align-self: center;
+        }
     }
 
     &__list-social {
@@ -121,6 +159,8 @@
             grid-row-start: 1;
             grid-row-end: 3;
             flex-direction: inherit;
+            justify-content: space-between;
+            margin-bottom: size(56px);
         }
     }
 
@@ -144,7 +184,8 @@
         @include vp-767 {
             grid-column-start: 1;
             grid-row-start: 3;
-            grid-row-end: 5;
+            grid-row-end: 3;
+            margin-bottom: size(64px);
         }
     }
 
@@ -163,6 +204,12 @@
             font-weight: 600;
             line-height: size(28px);
         }
+
+        svg {
+            width: size(20px);
+            height: size(20px);
+            align-self: center;
+        }
     }
 
     &__list-support {
@@ -173,7 +220,7 @@
         @include vp-767 {
             grid-column-start: 2;
             grid-row-start: 3;
-            grid-row-end: 5;
+            grid-row-end: 3;
         }
     }
 
@@ -181,6 +228,18 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+
+        a {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            gap: size(8px);
+        }
+
+        @include vp-767 {
+            grid-row-start: 4;
+            grid-column: 1/3;
+        }
     }
 
     &__copyright {

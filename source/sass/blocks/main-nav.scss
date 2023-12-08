@@ -1,4 +1,8 @@
 .main-nav {
+  @include vp-767 {
+    display: none;
+  }
+
   // &--opened &__arrow {
   //   display: none;
   // }

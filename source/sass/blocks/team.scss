@@ -15,29 +15,37 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: table;
+
+    @include vp-767 {
+      margin: 0 auto;
+    }
   }
 
   &__title {
     font-family: $ff-chakra-petch;
-    font-size: size(24px);
-    line-height: size(40px);
-    letter-spacing: size(1.2px);
-    text-transform: uppercase;
-    width: 100%;
-    max-width: size(1920px);
+
+    font-size: size(48px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: size(58px);
+    letter-spacing: size(-0.24px);
     margin: 0 auto size(40px) auto;
 
-    // @include vp-767 {
-    //   font-size: size(20px);
-    //   line-height: size(24px);
-    //   letter-spacing: size(1px);
-    //   margin: 0 0 size(16px) 0;
-    //   padding: 0 size(280px) 0 size(16px);
-    // }
+    @include vp-767 {
+      text-align: center;
+      font-size: size(32px);
+      line-height: normal;
+      letter-spacing: size(-0.16px);
+    }
   }
 
   &__wrapper {
     overflow: hidden;
+
+    @include vp-767 {
+      margin: 0 auto;
+      width: size(293px);
+    }
   }
 
   &__list {
@@ -45,6 +53,10 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @include vp-767 {
+      display: block;
+    }
   }
 
   &__photo {
@@ -74,6 +86,10 @@
       object-fit: cover;
       object-position: top;
     }
+
+    @include vp-767 {
+      margin-bottom: size(24px);
+    }
   }
 
   &__text {
@@ -82,6 +98,10 @@
     left: size(90.36px);
     text-align: center;
     pointer-events: none;
+
+    @include vp-767 {
+      left: size(104px);
+    }
   }
 
   &__title-descript {

@@ -3,6 +3,8 @@ mixin footer(footerMods)
     .container
       .footer__bg-wave
         +icon("icon-bg-footer-wave", "736", "353", true)
+      .footer__bg-wave-mobile
+        +icon("icon-bg-footer-wave-mobile", "430", "314", true)
       .footer__subscription
         h2.footer__title Subscribe to our newsletter for latest updates
         form(action="#" method="POST")
@@ -56,8 +58,11 @@ mixin footer(footerMods)
           li.footer__item.footer__item--first Need Help?
           li.footer__item 
             a(href="#" target="_blank", rel="nofollow noopener noreferrer") Tanjung Sari Street no.48, Pontianak City
-          li.footer__item 
+              +icon("icon-location", "20", "20")
+          li.footer__item
             a(href="mailto:Support@VRNas.com" target="_blank", rel="nofollow noopener noreferrer") Support@VRNas.com
+              +icon("icon-contacts", "20", "20") 
           li.footer__item 
             a(href="tel:+1234567890" target="_blank", rel="nofollow noopener noreferrer") +123 456 7890
+              +icon("icon-phone", "20", "20")
       .footer__copyright © Copyright 2023, All Rights Reserved

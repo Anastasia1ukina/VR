@@ -12,6 +12,27 @@ import './modules/animations/toggle';
 
 // ---------------------------------
 
+var swiperone;
+
+    function resizeScrenn() {
+        if (window.innerWidth > 767) {
+            swiperone =  new Swiper('.team__wrapper', {
+              slidesPerView: 4,
+              spaceBetween: 9,
+              loop: true,
+            })
+        }
+        if (window.innerWidth < 767) {
+            swiperone.destroy();
+        }
+    }
+
+    resizeScrenn();
+
+    window.addEventListener("resize", () => {
+        resizeScrenn();
+    });
+
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
@@ -20,13 +41,13 @@ window.addEventListener('DOMContentLoaded', () => {
   mobileVhFix();
 
   // Modules
-  (() =>
-  new Swiper('.team__wrapper', {
-    slidesPerView: 4,
-    spaceBetween: 9,
-    loop: true,
-  })
-)();
+//   (() =>
+//   new Swiper('.team__wrapper', {
+//     slidesPerView: 4,
+//     spaceBetween: 9,
+//     loop: true,
+//   })
+// )();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

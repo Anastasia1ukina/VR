@@ -36,6 +36,14 @@
         line-height: size(58px);
         letter-spacing: size(-0.24px);
         margin: size(12px) 0;
+
+        @include vp-767 {
+            font-size: size(32px);
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: size(-0.16px);
+        }
     }
 
     &__description {
@@ -50,6 +58,10 @@
 
         p {
             margin: 0;
+        }
+
+        @include vp-767 {
+            width: inherit;
         }
     }
 
@@ -86,6 +98,12 @@
 
         &--third {
             top: size(135px);
+        }
+
+        @include vp-767 {
+            padding: size(38px) size(56px) size(51px) size(32px);
+            position: initial;
+            margin-bottom: size(32px);
         }
     }
 }

@@ -3,14 +3,27 @@
     margin-bottom: size(198px);
     position: relative;
 
+    @include vp-767 {
+        margin-top: size(100px);
+    }
+
     &__blur {
         position: absolute;
         right: size(-64px);
         top: size(124px);
+        pointer-events: none;
+        width: size(1246px);
+        height: size(783px);
 
         img {
             width: size(1246px);
             height: size(783px);
+        }
+
+        @include vp-767 {
+            right: size(-144px);
+            bottom: size(-164px);
+            top: auto;
         }
     }
 
@@ -37,6 +50,12 @@
         line-height: size(58px);
         letter-spacing: size(-0.24px);
         margin: size(12px) 0;
+
+        @include vp-767 {
+            font-size: size(32px);
+            line-height: normal;
+            letter-spacing: size(-0.16px);
+        }
     }
 
     &__description {
@@ -52,6 +71,10 @@
         p {
             margin: 0;
         }
+
+        @include vp-767 {
+            width: inherit;
+        }
     }
 
     &__list {
@@ -60,6 +83,11 @@
         padding: 0;
         width: size(640px);
         position: relative;
+
+        @include vp-767 {
+            width: inherit;
+            padding: size(32px) size(22px) 0;
+        }
     }
 
     &__list::after {
@@ -86,7 +114,10 @@
         border-image-slice: 1;
 
         @include vp-767 {
-            display: block;
+            padding: 0;
+            display: flex;
+            justify-content: right;
+            flex-direction: column;
         }
     }
 
@@ -135,6 +166,16 @@
             width: size(360px);
             height: size(520px);
         }
+
+        @include vp-767 {
+            width: size(256px);
+            height: size(370px);
+
+            img {
+                width: size(256px);
+                height: size(370px);
+            }
+        }
     }
 
     &__block {
@@ -150,6 +191,11 @@
         text-align: center;
         bottom: size(-47px);
         right: size(190px);
+
+        @include vp-767 {
+            right: size(63px);
+            bottom: size(-95px);
+        }
     }
 
     &__from {

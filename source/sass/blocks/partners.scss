@@ -1,6 +1,12 @@
 .partners {
     text-align: center;
 
+    .container {
+        @include vp-767 {
+            padding: 0;
+        }
+    }
+
     &__intro {
         font-family: $ff-chakra-petch;
         font-size: size(16px);
@@ -25,6 +31,12 @@
         line-height: size(58px);
         letter-spacing: size(-0.24px);
         margin: size(12px) 0 size(58px) 0;
+
+        @include vp-767 {
+            font-size: size(32px);
+            line-height: normal;
+            letter-spacing: size(-0.16px);
+        }
     }
 
     &__img {
@@ -35,6 +47,16 @@
 
         img {
             width: size(1055px);
+        }
+
+        @include vp-767 {
+            width: size(430px);
+            height: size(302px);
+
+            img {
+                width: size(430px);
+                height: auto;
+            }
         }
     }
 
@@ -56,42 +78,88 @@
             bottom: size(210px);
             left: size(13px);
             animation: scale ease-in-out 7s infinite alternate;
+
+            @include vp-767 {
+                bottom: size(88px);
+                left: size(6px);
+            }
         }
 
         &--2 {
             bottom: size(380px);
             left: size(72px);
             animation: scale ease-in-out 5s infinite alternate;
+
+            @include vp-767 {
+                top: size(95px);
+                left: size(29px);
+            }
         }
 
         &--3 {
             top: size(81px);
             left: size(242px);
             animation: scale ease-in-out 6s infinite alternate;
+
+            @include vp-767 {
+                top: size(35px);
+                left: size(93px);
+            }
         }
 
         &--4 {
             top: size(17px);
             left: size(461px);
             animation: scale ease-in-out 5s infinite alternate;
+
+            @include vp-767 {
+                top: size(7px);
+                left: size(185px);
+            }
         }
 
         &--5 {
             top: size(80px);
             left: size(679px);
             animation: scale ease-in-out 7s infinite alternate;
+
+            @include vp-767 {
+                top: size(36px);
+                right: size(100px);
+                left: auto;
+            }
         }
 
         &--6 {
             bottom: size(380px);
             right: size(85px);
             animation: scale ease-in-out 5s infinite alternate;
+
+            @include vp-767 {
+                bottom: size(155px);
+                right: size(36px);
+            }
         }
 
         &--7 {
             bottom: size(210px);
             right: size(38px);
             animation: scale ease-in-out 6s infinite alternate;
+
+            @include vp-767 {
+                bottom: size(81px);
+                right: size(19px);
+            }
+        }
+
+        @include vp-767 {
+            width: size(41px);
+            height: size(41px);
+
+            svg {
+                width: size(41px);
+                height: size(41px);
+            }
         }
     }
 }
