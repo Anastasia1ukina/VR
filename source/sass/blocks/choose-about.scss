@@ -40,5 +40,9 @@
         line-height: size(58px);
         letter-spacing: size(-0.24px);
         width: size(708px);
+
+        @include vp-767 {
+            width: inherit;
+        }
     }
 }
