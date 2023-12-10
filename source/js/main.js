@@ -5,10 +5,11 @@ import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import { initFeedback } from './modules/init-feedback.js';
 import Swiper from 'swiper/swiper-bundle.js';
-import { scrollAnimation } from './modules/animations/scroll';
+import { gsapAnims } from './modules/animations/gsap-scroll';
 import './modules/animations/blur-header';
 import './modules/animations/scroll-btn';
 import './modules/animations/toggle';
+import './modules/animations/parallax-mouse';
 
 // ---------------------------------
 
@@ -41,13 +42,6 @@ window.addEventListener('DOMContentLoaded', () => {
   mobileVhFix();
 
   // Modules
-//   (() =>
-//   new Swiper('.team__wrapper', {
-//     slidesPerView: 4,
-//     spaceBetween: 9,
-//     loop: true,
-//   })
-// )();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -62,7 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initFeedback();
   });
-  scrollAnimation();
+  gsapAnims();
 });
 
 // ---------------------------------

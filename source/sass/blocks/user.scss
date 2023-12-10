@@ -107,7 +107,7 @@
         width: size(196px);
         height: size(128px);
         bottom: size(-20px);
-        right: size(-1px);
+        right: size(15px);
 
         img {
             width: size(196px);
@@ -130,7 +130,7 @@
         }
     }
 
-    &.animation {
-        transform: translateX(-100%);
-    }
+    // &.animation {
+    //     transform: translateX(-100%);
+    // }
 }
