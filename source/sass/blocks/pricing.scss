@@ -128,11 +128,21 @@
         font-weight: 400;
         line-height: size(28px);
         margin: 0 0 size(32px) 0;
+        display: flex;
+        justify-content: space-between;
 
-        background-image: url("../../img/svg/checkbox-pricing.svg");
-        background-position: inherit;
-        background-repeat: no-repeat;
-        padding-left: size(58px);
+        svg {
+            width: size(42px);
+            height: size(42px);
+        }
+    }
+
+    &__descript {
+        width: size(582px);
+
+        @include vp-767 {
+            width: size(296px);
+        }
     }
 
     &__item-title {

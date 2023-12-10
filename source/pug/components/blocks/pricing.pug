@@ -11,28 +11,34 @@ mixin pricing()
         .pricing__wrapper 
             ul.pricing__list
                 li.pricing__item 
-                    h3.pricing__item-title Customizable Packages
-                    .pricing__text
-                        p We understand that each project is unique, so we offer 
-                            | customizable packages to ensure that you get the services you 
-                            | need at a price that works for you. Our team will work with 
-                            | you to create a package that meets your specific goals and budget.
+                    +icon("checkbox-pricing", "42", "42", true)
+                    .pricing__descript
+                        h3.pricing__item-title Customizable Packages
+                        .pricing__text
+                            p We understand that each project is unique, so we offer 
+                                | customizable packages to ensure that you get the services you 
+                                | need at a price that works for you. Our team will work with 
+                                | you to create a package that meets your specific goals and budget.
                 li.pricing__item 
-                    h3.pricing__item-title Flexible Payment Options
-                    .pricing__text
-                        p We offer flexible payment options to make it easy 
-                            | for you to get started with our services. We 
-                            | accept various payment methods, including credit cards, 
-                            | bank transfers, and PayPal, and we can also work with 
-                            | you to create a payment plan that suits your needs.
+                    +icon("checkbox-pricing", "42", "42", true)
+                    .pricing__descript
+                        h3.pricing__item-title Flexible Payment Options
+                        .pricing__text
+                            p We offer flexible payment options to make it easy 
+                                | for you to get started with our services. We 
+                                | accept various payment methods, including credit cards, 
+                                | bank transfers, and PayPal, and we can also work with 
+                                | you to create a payment plan that suits your needs.
                 li.pricing__item 
-                    h3.pricing__item-title Satisfaction Guarantee
-                    .pricing__text
-                        p We stand behind our services and are committed 
-                            | to ensuring that you are completely satisfied 
-                            | with the final product. If for any reason you 
-                            | are not happy with our services, we will work 
-                            | with you to make it right or provide a full refund.
+                    +icon("checkbox-pricing", "42", "42", true)
+                    .pricing__descript
+                        h3.pricing__item-title Satisfaction Guarantee
+                        .pricing__text
+                            p We stand behind our services and are committed 
+                                | to ensuring that you are completely satisfied 
+                                | with the final product. If for any reason you 
+                                | are not happy with our services, we will work 
+                                | with you to make it right or provide a full refund.
             .pricing__img
                 +img("content", "man-pricing", "png", 360, 520, "Мужчина в VR очках")
             .pricing__block

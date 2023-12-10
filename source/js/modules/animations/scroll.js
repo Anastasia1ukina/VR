@@ -4,11 +4,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 const scrollAnimation = () => {
-    console.log('here')
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".animation", {
-        scrollTrigger: ".animation", // start the animation when ".box" enters the viewport (once)
+        scrollTrigger: ".animation", 
         x: 0,
         y: 0,
         duration: 2

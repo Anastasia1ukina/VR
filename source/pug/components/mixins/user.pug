@@ -6,9 +6,17 @@
         path: "content",
         image: "man-about",
         format: "png",
-        width: 542,
-        height: 642,
+        width: 518,
+        height: 622,
         altText: "Мужчина в VR очках",
+      },
+      bg: {
+        path: "content",
+        image: "bg-man",
+        format: "png",
+        width: 399,
+        height: 497,
+        altText: "",
       },
       blur: {
         path: "content",
@@ -37,6 +45,14 @@
         height: 662,
         altText: "Мужчина в VR очках",
       },
+      bg: {
+        path: "content",
+        image: "bg-man",
+        format: "png",
+        width: 399,
+        height: 497,
+        altText: "",
+      },
       blur: {
         path: "content",
         image: "bg-blur",
@@ -64,6 +80,14 @@
         height: 574,
         altText: "Мужчина в VR очках",
       },
+      bg: {
+        path: "content",
+        image: "bg-man",
+        format: "png",
+        width: 399,
+        height: 497,
+        altText: "",
+      },
       blur: {
         path: "content",
         image: "bg-blur",
@@ -86,9 +110,17 @@
         path: "content",
         image: "man-about2",
         format: "png",
-        width: 417,
+        width: 399,
         height: 574,
         altText: "Мужчина в VR очках",
+      },
+      bg: {
+        path: "content",
+        image: "bg-man",
+        format: "png",
+        width: 399,
+        height: 497,
+        altText: "",
       },
       blur: {
         path: "content",
@@ -119,6 +151,8 @@ mixin user(options = {})
         if data.cluster
           .user__wrapper-img(class = userpicClassMod)
             +img(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, data.img.altText)
+          .user__wrapper-bg(class = userpicClassMod)
+            +img(data.bg.path, data.bg.image, data.bg.format, data.bg.width, data.bg.height, data.bg.altText)
           .user__bg-blur(class = userpicClassMod)
             +img(data.blur.path, data.blur.image, data.blur.format, data.blur.width, data.blur.height, data.blur.altText)
           .user__headset(class = userpicClassMod)
@@ -126,6 +160,8 @@ mixin user(options = {})
         else
           .user__wrapper-img.user__wrapper-img--about2(class = userpicClassMod)
             +img(data.img.path, data.img.image, data.img.format, data.img.width, data.img.height, data.img.altText)
+          .user__wrapper-bg.user__wrapper-bg--about2(class = userpicClassMod)
+            +img(data.bg.path, data.bg.image, data.bg.format, data.bg.width, data.bg.height, data.bg.altText)
           .user__bg-blur(class = userpicClassMod)
             +img(data.blur.path, data.blur.image, data.blur.format, data.blur.width, data.blur.height, data.blur.altText)
           .user__headset.user__headset--about2(class = userpicClassMod)
