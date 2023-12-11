@@ -15,8 +15,21 @@ mixin intro()
               | Experience Unforgettable Events in VR. 
               | Bring your events to life like never before with our VR services
           +btn({text: "discover more", href: "#", isExternal: true}).intro__button
-          .intro__happy-client
-            +img("content", "intro-mini-image", "jpg", 196, 128, "Мужчина в очках с камерой")
+          .intro__happy-wrapper
+            .intro__container-mini 
+              ul.intro__mini-team
+                li.intro__team.intro__team--1
+                  +img("content", "intro-team-1", "png", 50, 50, "Developer 1")
+                li.intro__team.intro__team--2
+                  +img("content", "intro-team-2", "png", 50, 50, "Developer 2")
+                li.intro__team.intro__team--3
+                  +img("content", "intro-team-3", "png", 50, 50, "Developer 3")
+              .intro__title-client
+                p 
+                  span 32k+
+                  |  Happy Client
+            .intro__happy-client
+              +img("content", "intro-mini-image", "jpg", 196, 128, "Мужчина в очках с камерой")
         .intro__wrapper-img
           +img("content", "man-intro", "png", 526, 626, "Мужчина в VR очках")
       .intro__bg-blur

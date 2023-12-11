@@ -57,12 +57,6 @@
             height: size(497px);
         }
 
-        &--about2 {
-            top: size(77px);
-            right: size(-24px);
-            left: auto;
-        }
-
         @include vp-767 {
             top: size(92px);
             left: 0;
@@ -70,6 +64,17 @@
             img {
                 width: size(300px);
                 height: size(373px);
+            }
+        }
+
+        &--about2 {
+            top: size(77px);
+            right: size(-24px);
+            left: auto;
+
+            @include vp-767 {
+                top: size(80px);
+                left: size(30px);
             }
         }
     }
@@ -114,11 +119,6 @@
             height: size(128px);
         }
 
-        &--about2 {
-            left: size(-80px);
-            bottom: size(-59px);
-        }
-
         @include vp-767 {
             width: size(147px);
             height: size(96px);
@@ -126,6 +126,15 @@
             img {
                 width: size(147px);
                 height: size(96px);
+            }
+        }
+
+        &--about2 {
+            left: size(-80px);
+            bottom: size(-59px);
+
+            @include vp-767 {
+                left: size(-60px);
             }
         }
     }
