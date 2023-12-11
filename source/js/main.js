@@ -1,8 +1,8 @@
-import {mobileVhFix} from './utils/mobile-vh-fix.js';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
-import {CustomSelect} from './modules/select/custom-select';
-import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+import { mobileVhFix } from './utils/mobile-vh-fix.js';
+import { initModals } from './modules/modals/init-modals';
+import { Form } from './modules/form-validate/form';
+import { CustomSelect } from './modules/select/custom-select';
+import { uploadFile, uploadImageDrop } from './modules/input-file/init-upload';
 import { initFeedback } from './modules/init-feedback.js';
 import Swiper from 'swiper/swiper-bundle.js';
 import { gsapAnims } from './modules/animations/gsap-scroll';
@@ -13,26 +13,26 @@ import './modules/animations/parallax-mouse';
 
 // ---------------------------------
 
-var swiperone;
+let swiperone;
 
-    function resizeScrenn() {
-        if (window.innerWidth > 767) {
-            swiperone =  new Swiper('.team__wrapper', {
-              slidesPerView: 4,
-              spaceBetween: 9,
-              loop: true,
-            })
-        }
-        if (window.innerWidth < 767) {
-            swiperone.destroy();
-        }
-    }
+function resizeScreen() {
+  if (window.innerWidth > 767) {
+    swiperone = new Swiper('.team__wrapper', {
+      slidesPerView: 4,
+      spaceBetween: 9,
+      loop: true,
+    })
+  }
+  if (window.innerWidth < 767) {
+    delete swiperone.slidesPerView;
+  }
+}
 
-    resizeScrenn();
+resizeScreen();
 
-    window.addEventListener("resize", () => {
-        resizeScrenn();
-    });
+window.addEventListener("resize", () => {
+  resizeScreen();
+});
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -42,6 +42,20 @@ window.addEventListener('DOMContentLoaded', () => {
   mobileVhFix();
 
   // Modules
+  let acc = document.querySelectorAll('.choose__trigger');
+  // let accFirst = document.querySelectorAll('.choose__content--first');
+
+  acc.forEach(item => {
+    item.addEventListener('click', e => {
+      if (e.target.classList.contains('active')) {
+        // accFirst.style.height = '';
+        e.target.classList.remove('active');
+        return;
+      }
+      acc.forEach(e => e.classList.remove('active'));
+      e.target.classList.add('active');
+    });
+  });
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
