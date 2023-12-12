@@ -68,6 +68,7 @@
         font-weight: 500;
         line-height: normal;
         margin: 0;
+        user-select: none;
     }
 
     &__trigger {
@@ -77,6 +78,13 @@
         border-bottom: size(1px) solid rgba(255, 255, 255, 0.35);
         transition: height 0.5s;
         cursor: pointer;
+    }
+
+    &__btn-trigger {
+        svg {
+            width: size(12px);
+            height: size(12px);
+        }
     }
 
     &__content {
@@ -91,10 +99,6 @@
         overflow: hidden;
         height: 0;
         transition: height 0.5s;
-
-        // &--first {
-        //     height: size(150px);
-        // }
 
         p {
             margin: 0;

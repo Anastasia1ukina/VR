@@ -12,6 +12,7 @@ module.exports = {
   entry: {
     main: './js/main.js',
     vendor: './js/vendor.js',
+    about: './js/about.js',
   },
   devtool: isDev ? 'source-map' : false,
   output: {

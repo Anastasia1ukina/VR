@@ -1,4 +1,7 @@
 export function animateOnScroll({node, cbOnce = () => {}, cb = () => {}}) {
+	if (!(node instanceof Node)) {
+		throw new Error('В функцию animateOnScroll, в переменную node передают не DOM узел')
+	}
 	cbOnce(node);
 
 	if (isElementInViewport(node) === true) {

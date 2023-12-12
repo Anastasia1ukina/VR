@@ -98,6 +98,14 @@
         right: size(-111px);
         top: 0;
         width: size(1px);
+
+        @include vp-767 {
+            bottom: 0;
+            height: size(1px);
+            right: size(22px);
+            top: auto;
+            width: calc(100% - size(44px));
+        }
     }
 
     &__wrapper {
@@ -180,6 +188,7 @@
         @include vp-767 {
             width: size(256px);
             height: size(370px);
+            padding-top: size(37px);
 
             img {
                 width: size(256px);

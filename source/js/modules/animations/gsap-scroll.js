@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { animateOnScroll } from "./funcs";
 
-// const capabilities = document.querySelector('.capabilities');
+const capabilities = document.querySelector('.capabilities');
 const introSection = document.querySelector('.intro');
 const introText = document.querySelector('.intro__text');
 const introImg = document.querySelector('.intro__wrapper-img');
@@ -18,13 +18,13 @@ function gsapAnims() {
 		cbOnce: () => {
             gsap.set(introText, { x: '-40%', opacity: 0 });
             gsap.set(introImg, { x: '40%', opacity: 0 });
-			// gsap.set(capabilities, { opacity: 0, y: '60%' });
+			gsap.set(capabilities, { opacity: 0, y: '60%' });
 		},
 		cb: () => {
 			gsap.timeline()
-                .to(introText, { x: 0, opacity: 1 })
-                .to(introImg, { x: 0, opacity: 1 })
-				// .to(capabilities, { y: 0, opacity: 1 })
+				.to(introText, { x: 0, opacity: 1 })
+				.to(introImg, { x: 0, opacity: 1 }, 0)
+				.to(capabilities, { y: 0, opacity: 1 })
 		}
 	});
 
