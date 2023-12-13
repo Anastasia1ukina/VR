@@ -5,28 +5,28 @@ mixin team()
             .team__wrapper-text
                 span.team__intro OUR TEAM
                 h2.team__title Our Professionals Team
-            +btn({text: "see all", href: "#", isExternal: true}).team__button
-        .team__wrapper.team__swiper.swiper
-            .team__list.swiper-wrapper
-                .team__item.swiper-slide
+            button.btn.team__button See all
+        .team__wrapper
+            ul.team__list
+                li.team__item
                     .team__photo
                         +img("slides", "team-1", "jpg", 275, 370, "Bondan Prabowo")
                     .team__text
                         +title({text: "Bondan Prabowo", classMods: ["h4"]}).team__title-descript
                         +text({text: "CEO", classMods: ["p2"]}).team__description
-                .team__item.swiper-slide
+                li.team__item
                     .team__photo
                         +img("slides", "team-2", "jpg", 275, 370, "Bayu Aji")
                     .team__text
                         +title({text: "Bayu Aji", classMods: ["h4"]}).team__title-descript
                         +text({text: "VR Development", classMods: ["p2"]}).team__description
-                .team__item.swiper-slide
+                li.team__item
                     .team__photo
                         +img("slides", "team-3", "jpg", 275, 370, "Agung Brandon")
                     .team__text
                         +title({text: "Agung Brandon", classMods: ["h4"]}).team__title-descript
                         +text({text: "VR Artist", classMods: ["p2"]}).team__description
-                .team__item.swiper-slide
+                li.team__item
                     .team__photo
                         +img("slides", "team-4", "jpg", 275, 370, "Aril Laso")
                     .team__text

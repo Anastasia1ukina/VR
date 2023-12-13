@@ -70,7 +70,6 @@
   },
   "dependencies": {
     "gsap": "^3.12.3",
-    "parallax-js": "^3.1.0",
-    "swiper": "^8.4.5"
+    "parallax-js": "^3.1.0"
   }
 }
