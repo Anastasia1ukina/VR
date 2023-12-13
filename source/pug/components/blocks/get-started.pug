@@ -7,10 +7,11 @@ mixin get-started()
       h2.get-started__title Bringing Your Virtual Reality Dreams to Life
       .get-started__video 
         .get-started__content 
-          iframe(src="https://www.youtube.com/watch?v=hgjMULnRKjI&ab_channel=vanzai" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen="")
-          +img()
+          //- iframe(src="https://www.youtube.com/watch?v=hgjMULnRKjI&ab_channel=vanzai" title="YouTube video player" frameborder="0"
+          //-   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          //-   allowfullscreen="")
+          .get-started__video-img
+            +img("content", "preview-video", "jpg", 1200, 522, "Video preview")
           .get-started__info 
             span.get-started__tag VR Service
             h4.get-started__video-title How to get started

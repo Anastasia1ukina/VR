@@ -3,11 +3,12 @@ mixin pricing()
     .container
         .pricing__blur
             +img("content", "blur-pricing", "png", 1246, 783, "")
-        span.pricing__intro Our pricing
-        h2.pricing__title Affordable VR Services for Everyone
-        .pricing__description 
-            p At VRNas, we believe that everyone should have access to the benefits of VR. 
-                | That's why we offer a range of pricing options to meet the needs of any budget.
+        .pricing__wrapper-text
+            span.pricing__intro Our pricing
+            h2.pricing__title Affordable VR Services for Everyone
+            .pricing__description 
+                p At VRNas, we believe that everyone should have access to the benefits of VR. 
+                    | That's why we offer a range of pricing options to meet the needs of any budget.
         .pricing__wrapper 
             ul.pricing__list
                 li.pricing__item 

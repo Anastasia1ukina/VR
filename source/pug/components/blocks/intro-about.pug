@@ -14,5 +14,7 @@ mixin intro-about()
         ul.intro-about__breadcrumb
             li.intro-about__item
                 a(href="#index.html").intro-about__link Home 
-            li.intro-about__item
+                .intro-about__next
+                    include ../../../img/svg/arrow-breadcrumbs.svg
+            li.intro-about__item.intro-about__item--last
                 span(href="#").intro-about__link.current About us

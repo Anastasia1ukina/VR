@@ -21,6 +21,20 @@
     }
   }
 
+  &__intro-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    height: fit-content;
+    align-self: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: size(1px) solid $color-deep-sky-blue;
+    border-image: linear-gradient(to right,$color-deep-sky-blue,$color-free-speech-magenta);
+    border-image-slice: 1;
+  }
+
   &__title {
     font-family: $ff-chakra-petch;
 

@@ -1,8 +1,11 @@
 mixin team()
   section.team(id="team")
     .container
-        span.team__intro OUR TEAM
-        h2.team__title Our Professionals Team
+        .team__intro-item
+            .team__wrapper-text
+                span.team__intro OUR TEAM
+                h2.team__title Our Professionals Team
+            +btn({text: "see all", href: "#", isExternal: true}).team__button
         .team__wrapper.team__swiper.swiper
             .team__list.swiper-wrapper
                 .team__item.swiper-slide

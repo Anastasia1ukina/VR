@@ -6,6 +6,14 @@
         @include vp-767 {
             display: block;
         }
+
+        .user {
+            @include vp-767 {
+                display: flex;
+                justify-content: flex-end;
+                margin-right: size(20px);
+            }
+        }
     }
 
     &__text {

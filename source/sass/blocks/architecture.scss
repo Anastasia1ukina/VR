@@ -49,18 +49,23 @@
         position: relative;
     }
 
-    &__item {
-        align-self: center;
-        margin-right: 25px;
+    &__next {
+        position: absolute;
+        top: size(2px);
+        right: size(5px);
+
+        svg {
+            width: size(18px);
+            height: size(19px);
+        }
     }
 
-    &__item:not(:last-child):after {
-        content: url("../../img/svg/arrow-breadcrumbs.svg");
-        position: absolute;
-        margin-left: size(4px);
-        margin-top: size(-1px);
-        width: size(18px);
-        height: size(18px);
+    &__item {
+        position: relative;
+
+        &--last {
+            margin-top: size(-2px);
+        }
     }
 
     &__link {
@@ -70,9 +75,10 @@
         font-weight: 600;
         line-height: normal;
         text-decoration: none;
+        padding-right: size(30px);
     }
 
-    &__link:not(span):hover {
+    &__link:hover {
         opacity: 0.7;
         transition: 0.4s ease opacity;
     }
@@ -84,6 +90,11 @@
         font-style: normal;
         font-weight: 300;
         line-height: size(28px);
+    }
+
+    &__link.current:hover {
+        opacity: 1;
+        transition: none;
     }
 
     &__wrapper {

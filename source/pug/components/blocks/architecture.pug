@@ -8,9 +8,13 @@ mixin architecture()
         ul.architecture__breadcrumb
             li.architecture__item
                 a(href="#index.html").architecture__link Home 
+                .architecture__next
+                    include ../../../img/svg/arrow-breadcrumbs.svg
             li.architecture__item
                 a(href="#blog.html").architecture__link Blog 
-            li.architecture__item
+                .architecture__next
+                    include ../../../img/svg/arrow-breadcrumbs.svg
+            li.architecture__item.architecture__item--last
                 span(href="#").architecture__link.current Bringing Designs to Life: How VR is Changing Architecture
         .architecture__wrapper
             .architecture__text

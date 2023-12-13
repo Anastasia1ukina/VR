@@ -170,6 +170,7 @@
         font-weight: 300;
         line-height: size(28px);
         align-self: center;
+        position: relative;
 
         span {
             color: $color-default-white;
@@ -178,6 +179,14 @@
             font-style: normal;
             font-weight: 600;
             line-height: size(28px);
+        }
+
+        svg {
+            position: absolute;
+            width: size(48px);
+            height: size(7px);
+            bottom: 0;
+            left: size(-7px);
         }
     }
 

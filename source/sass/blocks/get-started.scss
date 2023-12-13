@@ -1,5 +1,4 @@
 .get-started {
-    text-align: center;
     margin-top: size(150px);
     position: relative;
 
@@ -45,6 +44,7 @@
         letter-spacing: size(-0.24px);
         margin: size(12px) auto;
         width: size(802px);
+        text-align: center;
 
         @include vp-767 {
             width: inherit;
@@ -54,27 +54,147 @@
         }
     }
 
-    &__video {
-        margin-bottom: size(50px);
-        width: size(1200px);
-        height: size(522px);
+    &__content {
+        cursor: pointer;
+        border-radius: size(12px);
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 43.5%;
+        min-height: size(250px);
+    }
 
-        video {
-            width: size(1200px);
-            height: size(522px);
-        }
+    &__content::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background: url('../../img/svg/play.svg') center/contain no-repeat;
+        width: size(100px);
+        height: size(100px);
 
         @include vp-767 {
-            width: size(398px);
-            height: size(254px);
-            border-radius: size(12px);
-            margin: 0;
+            width: size(40px);
+            height: size(40px);
+        }
+    }
 
-            video {
-                border-radius: size(12px);
-                width: size(398px);
+    &__video-img {
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            width: size(1200px);
+            height: size(522px);
+
+            @include vp-767 {
+                width: size(410px);
                 height: size(254px);
             }
         }
+    }
+
+    &__info {
+        padding: size(40px) size(30px) size(100px);
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__tag {
+        margin-bottom: size(12px);
+        display: inline-block;
+        padding: size(2px) size(10px);
+        background: rgba(255, 255, 255, .3);
+        border-radius: size(16px);
+
+        font-family: $ff-chakra-petch;
+        font-size: size(14px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: size(20px);
+    }
+
+    &__video-title {
+        margin: 0;
+        font-family: $ff-chakra-petch;
+        font-size: size(36px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: size(44px);
+        letter-spacing: size(-0.72px);
+
+        @include vp-767 {
+            font-size: size(20px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+
+    &__bottom {
+        pointer-events: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 size(30px) size(30px);
+        display: flex;
+        align-items: center;
+        gap: size(15px);
+    }
+
+    &__video-play {
+        flex: 0 0 size(12px);
+        width: size(16px);
+        height: size(16px);
+        background: url('../../img/svg/triangle.svg') center/contain no-repeat;
+    }
+
+    &__video-line {
+        flex: 1 1 auto;
+        height: size(8px);
+        background-color: rgba(255, 255, 255, .3);
+        border-radius: size(4px);
+        position: relative;
+    }
+
+    &__video-line::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, .5);
+        border-radius: size(4px);
+    }
+
+    &__video-line::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: size(8px);
+        height: size(8px);
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    &__button {
+        margin: size(48px) auto 0 auto;
+        width: size(183px);
+        display: block;
+
     }
 }

@@ -12,15 +12,15 @@ mixin service()
             | exceptional customer service and support, and our team is always available 
             | to answer any questions and address any concerns you may have.
       ul.service__list 
-        li.service__item 
+        li.service__item.service__item--1
           +services({clusterId: services["development"]})
-        li.service__item.service__item--second
+        li.service__item.service__item--second.service__item--2
           +services({clusterId: services["design"]})
-        li.service__item.service__item--third 
+        li.service__item.service__item--third.service__item--3
           +services({clusterId: services["consulting"]})
-        li.service__item 
+        li.service__item.service__item--4 
           +services({clusterId: services["games"]})
-        li.service__item.service__item--second 
+        li.service__item.service__item--second.service__item--5
           +services({clusterId: services["events"]})
-        li.service__item.service__item--third  
+        li.service__item.service__item--third.service__item--6 
           +services({clusterId: services["entertainment"]})
