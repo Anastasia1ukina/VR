@@ -14,13 +14,25 @@ mixin service()
       ul.service__list 
         li.service__item.service__item--1
           +services({clusterId: services["development"]})
+          .service__hover
+            +btn({text: "learn more", href: "#", isExternal: true}).service__button
         li.service__item.service__item--second.service__item--2
           +services({clusterId: services["design"]})
+          .service__hover
+            +btn({text: "learn more", href: "#", isExternal: true}).service__button
         li.service__item.service__item--third.service__item--3
           +services({clusterId: services["consulting"]})
+          .service__hover
+            +btn({text: "learn more", href: "#", isExternal: true}).service__button
         li.service__item.service__item--4 
           +services({clusterId: services["games"]})
+          .service__hover
+            +btn({text: "learn more", href: "#", isExternal: true}).service__button
         li.service__item.service__item--second.service__item--5
           +services({clusterId: services["events"]})
+          .service__hover
+            +btn({text: "learn more", href: "#", isExternal: true}).service__button
         li.service__item.service__item--third.service__item--6 
           +services({clusterId: services["entertainment"]})
+          .service__hover
+            +btn({text: "learn more", href: "#", isExternal: true}).service__button
