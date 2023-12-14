@@ -3,13 +3,10 @@ mixin get-started()
     .container
       .get-started__img
         +img("content", "blur-get-started", "png", 874, 619, "")
-      span.get-started__intro How to get started
+      +title-intro({text: "How to get started"}).get-started__intro
       h2.get-started__title Bringing Your Virtual Reality Dreams to Life
       .get-started__video 
         .get-started__content 
-          //- iframe(src="https://www.youtube.com/watch?v=hgjMULnRKjI&ab_channel=vanzai" title="YouTube video player" frameborder="0"
-          //-   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          //-   allowfullscreen="")
           .get-started__video-img
             +img("content", "preview-video", "jpg", 1200, 522, "Video preview")
           .get-started__info 
@@ -18,6 +15,7 @@ mixin get-started()
           .get-started__bottom 
             span.get-started__video-play
             span.get-started__video-line
-          //- video(width='1200' height='522' poster="/img/content/preview-video.jpg")
-          //-     source(src='video/web.mp4' type='video/mp4')
+          .get-started__video-view
+            video(width="1200" height="522" controls="controls")
+              source(src="video/web.mp4" type='video/mp4')
       +btn({text: "get started", href: "#", isExternal: true}).get-started__button

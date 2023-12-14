@@ -10,8 +10,6 @@ import './modules/animations/scroll-btn';
 import './modules/animations/toggle';
 import './modules/animations/parallax-mouse';
 
-window.addEventListener('DOMContentLoaded', () => {
-
   // Utils
   // ---------------------------------
 
@@ -33,6 +31,16 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const getStartedContentNode = document.querySelector('.get-started__content');
+  let isClickedContentNode = false;
+  
+  getStartedContentNode.addEventListener('click', () => {
+    if (isClickedContentNode === false) {
+      isClickedContentNode = true;
+      getStartedContentNode.classList.add('active');
+    }
+  });
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
@@ -47,7 +55,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initFeedback();
   });
   gsapAnims();
-});
 
 // ---------------------------------
 

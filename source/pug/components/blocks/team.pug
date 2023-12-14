@@ -3,7 +3,7 @@ mixin team()
     .container
         .team__intro-item
             .team__wrapper-text
-                span.team__intro OUR TEAM
+                +title-intro({text: "Our team"}).team__intro
                 h2.team__title Our Professionals Team
             button.btn.team__button See all
         .team__wrapper
@@ -32,3 +32,4 @@ mixin team()
                     .team__text
                         +title({text: "Aril Laso", classMods: ["h4"]}).team__title-descript
                         +text({text: "UI / UX Designer", classMods: ["p2"]}).team__description
+            button.btn.team__button2 See all

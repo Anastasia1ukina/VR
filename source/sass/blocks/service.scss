@@ -13,21 +13,6 @@
         }
     }
 
-    &__intro {
-        font-family: $ff-chakra-petch;
-        font-size: size(16px);
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: size(2.24px);
-        text-transform: uppercase;
-        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: table;
-    }
-
     &__title {
         font-family: $ff-chakra-petch;
         font-size: size(48px);
@@ -87,7 +72,7 @@
         border: size(1px) solid rgba(255, 255, 255, 0.6);
         border-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), $color-jaguar);
         border-image-slice: 1;
-        transition: .3s;
+        // transition: .3s;
 
         cursor: pointer;
         flex-basis: calc(33.33% - size(15px));

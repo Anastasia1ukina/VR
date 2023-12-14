@@ -1,7 +1,7 @@
 mixin partners()
   section.partners
     .container
-        span.partners__intro Our Trusted Partners
+        +title-intro({text: "Our Trusted Partners"}).partners__intro
         h2.partners__title Discover the Companies We Work With
         .partners__img
             +img("content", "partners", "png", 1055, 741, "Мужчина в VR очках")

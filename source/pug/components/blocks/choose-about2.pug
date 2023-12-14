@@ -4,7 +4,7 @@ mixin choose-about2()
       .choose-about2__wrapper
         +user({clusterId: users["choose-more"]})
         .choose-about2__text 
-          span.choose-about2__intro Why choose us
+          +title-intro({text: "Why choose us"})
           h2.choose-about2__title Why choose Us for Your VR Needs
           ul.choose-about2__list
             li.choose-about2__item

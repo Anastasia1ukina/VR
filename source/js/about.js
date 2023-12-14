@@ -9,27 +9,6 @@ import './modules/animations/toggle';
 import './modules/animations/blur-header';
 import './modules/animations/parallax-mouse';
 
-// let swiperone;
-
-// function resizeScreen() {
-//     if (window.innerWidth > 767) {
-//         swiperone = new Swiper('.team__wrapper', {
-//             slidesPerView: 4,
-//             spaceBetween: 9,
-//             loop: true,
-//         })
-//     }
-//     if (window.innerWidth < 767 && swiperone instanceof Swiper) {
-//         swiperone.destroy();
-//     }
-// }
-
-// resizeScreen();
-
-// window.addEventListener("resize", () => {
-//     resizeScreen();
-// });
-
 let acc = document.querySelectorAll('.choose-about2__trigger');
 
 acc.forEach(item => {

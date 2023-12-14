@@ -1,6 +1,5 @@
 .get-started {
     margin-top: size(150px);
-    position: relative;
 
     &__img {
         position: absolute;
@@ -20,18 +19,6 @@
     }
 
     &__intro {
-        font-family: $ff-chakra-petch;
-        font-size: size(16px);
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: size(2.24px);
-        text-transform: uppercase;
-        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: table;
         margin: 0 auto;
     }
 
@@ -63,6 +50,23 @@
         min-height: size(250px);
     }
 
+    &__content.active {
+        .get-started__video-img {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .get-started__video-view {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &::before {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
     &__content::before {
         content: "";
         pointer-events: none;
@@ -70,12 +74,15 @@
         z-index: 2;
         top: 50%;
         left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         background: url('../../img/svg/play.svg') center/contain no-repeat;
         width: size(100px);
         height: size(100px);
+        opacity: 1;
+        visibility: visible;
+        transition-timing-function: ease;
+        transition-duration: 0.6s;
+        transition-property: opacity, visibility;
 
         @include vp-767 {
             width: size(40px);
@@ -84,6 +91,10 @@
     }
 
     &__video-img {
+        transition-timing-function: ease;
+        transition-duration: 0.6s;
+        transition-property: opacity, visibility;
+
         img {
             position: absolute;
             top: 0;
@@ -196,5 +207,30 @@
         width: size(183px);
         display: block;
 
+    }
+
+    &__video-view {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+        transition-timing-function: ease;
+        transition-duration: 0.6s;
+        transition-property: opacity, visibility;
+        background-color: $color-default-black;
+
+        video {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 }

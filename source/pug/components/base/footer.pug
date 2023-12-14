@@ -11,8 +11,11 @@ mixin footer(footerMods)
           .footer__message
             +icon("icon-message", "24", "24")
           .footer__email
-            label(for="email-address").visually-hidden
-            input(id="email-address" name="email-address" type="email" placeholder="Enter your email address" value="")
+            +custom-input({
+              inputType: "email",
+              inputPlaceholder: "Enter your email address",
+              inputName: "user-mail",
+            })
           button(type='submit' value='Send Request').footer__btn-form
             +icon("icon-message-btn", "16", "16")
       .footer__wrapper

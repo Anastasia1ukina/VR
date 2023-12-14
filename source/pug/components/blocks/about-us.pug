@@ -4,7 +4,7 @@ mixin about-us()
       .about-us__wrapper
         +user({clusterId: users["about"], class: "animation"})
         .about-us__text 
-          span.about-us__intro About us
+          +title-intro({text: "About us"})
           h2.about-us__title Bring your events to life like never before with our VR services.
           .about-us__description 
             p

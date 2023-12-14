@@ -8,18 +8,6 @@
     }
 
     &__intro {
-        font-family: $ff-chakra-petch;
-        font-size: size(16px);
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: size(2.24px);
-        text-transform: uppercase;
-        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: table;
         margin: 0 auto;
     }
 
