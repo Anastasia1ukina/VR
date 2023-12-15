@@ -7,6 +7,7 @@ import { initFeedback } from './modules/init-feedback.js';
 import { gsapAnims } from './modules/animations/gsap-about';
 import './modules/animations/toggle';
 import './modules/animations/blur-header';
+import './modules/init-subscribe.js';
 import './modules/animations/parallax-mouse';
 
 let acc = document.querySelectorAll('.choose-about2__trigger');

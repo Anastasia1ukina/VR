@@ -90,6 +90,19 @@
         font-style: normal;
         font-weight: 300;
         line-height: size(28px);
+        pointer-events: none;
+
+        @include vp-767 {
+            display: none;
+        }
+
+        &--mobile {
+            display: none;
+
+            @include vp-767 {
+                display: contents;
+            }
+        }
     }
 
     &__link.current:hover {
@@ -271,6 +284,10 @@
 
     &__article {
         width: size(333px);
+
+        @include vp-767 {
+            margin-top: size(100px);
+        }
     }
 
     &__title-article {

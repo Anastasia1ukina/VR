@@ -5,6 +5,7 @@ import { CustomSelect } from './modules/select/custom-select';
 import { uploadFile, uploadImageDrop } from './modules/input-file/init-upload';
 import { initFeedback } from './modules/init-feedback.js';
 import { gsapAnims } from './modules/animations/gsap-blog';
+import './modules/init-subscribe.js';
 import './modules/animations/toggle';
 import './modules/animations/blur-header';
 

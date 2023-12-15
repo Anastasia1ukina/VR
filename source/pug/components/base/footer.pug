@@ -7,17 +7,19 @@ mixin footer(footerMods)
         +icon("icon-bg-footer-wave-mobile", "430", "314", true)
       .footer__subscription
         h2.footer__title Subscribe to our newsletter for latest updates
-        form(action="#" method="POST")
-          .footer__message
-            +icon("icon-message", "24", "24")
-          .footer__email
-            +custom-input({
-              inputType: "email",
-              inputPlaceholder: "Enter your email address",
-              inputName: "user-mail",
-            })
-          button(type='submit' value='Send Request').footer__btn-form
-            +icon("icon-message-btn", "16", "16")
+        .footer__text-message Your message has sent
+        .footer__form.active
+          form(action="#" id="form")
+            .footer__message
+              +icon("icon-message", "24", "24")
+            .footer__email
+              +custom-input({
+                inputType: "email",
+                inputPlaceholder: "Enter your email address",
+                inputName: "user-mail",
+              }).footer__input
+            button(type='submit' value='Send Request').footer__btn-form
+              +icon("icon-message-btn", "16", "16")
       .footer__wrapper
         ul.footer__list-social 
           li.footer__item-logo 

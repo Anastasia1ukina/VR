@@ -75,7 +75,7 @@ function gsapAnims() {
     animateOnScroll({
 		node: teamSection,
 		cbOnce: () => {
-			gsap.set(teamSection, { opacity: 0, y: '60%' });
+			gsap.set(teamSection, { opacity: 0, y: '40%' });
 		},
 		cb: () => {
 			gsap.timeline()

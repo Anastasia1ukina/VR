@@ -2,6 +2,14 @@
     margin-top: size(210px);
     position: relative;
 
+    @include vp-767 {
+        margin-top: size(169px);
+    }
+
+    .capabilities {
+        margin-top: size(32px);
+    }
+
     &__bg-lines {
         position: absolute;
         left: size(-4px);
@@ -35,6 +43,7 @@
             font-size: size(32px);
             line-height: normal;
             letter-spacing: size(-0.16px);
+            margin: size(12px) auto 0 auto;
         }
     }
 }

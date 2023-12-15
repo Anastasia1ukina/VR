@@ -2,10 +2,60 @@
     margin-top: size(150px);
     position: relative;
 
+    @include vp-767 {
+        margin-top: size(100px);
+    }
+
     form {
+        position: relative;
+    }
+
+    &__form {
+        position: relative;
         align-self: center;
         flex: 0 1 size(365px);
-        position: relative;
+        transition-timing-function: ease;
+        transition-duration: 0.6s;
+        transition-property: opacity, visibility;
+        opacity: 0;
+    }
+
+    &__text-message {
+        font-family: $ff-chakra-petch;
+        font-size: size(30px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: size(58px);
+        letter-spacing: size(-0.2px);
+
+        position: absolute;
+        right: size(106px);
+        top: size(66px);
+        transition-timing-function: ease;
+        transition-duration: 0.6s;
+        transition-property: opacity, visibility;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        @include vp-767 {
+            font-size: size(25px);
+            line-height: size(38px);
+            letter-spacing: size(-0.2px);
+            right: size(77px);
+            top: size(112px);
+        }
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+    &__form.active {
+        opacity: 1;
+    }
+
+    &__email .is-invalid {
+        border: 2px solid #ff1553;
     }
 
     &__message {
@@ -91,6 +141,8 @@
         justify-content: space-between;
         padding: size(38px) size(77px) size(31px) size(74px);
         background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
+        position: relative;
+        border-radius: size(4px);
 
         @include vp-767 {
             display: block;
@@ -131,6 +183,7 @@
         @include vp-767 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            margin-top: size(92px);
         }
     }
 
@@ -166,6 +219,8 @@
     }
 
     &__contacts {
+        width: size(264px);
+
         svg {
             width: size(46px);
             height: size(46px);
@@ -190,6 +245,13 @@
         }
     }
 
+    &__item:hover {
+        opacity: 0.7;
+        transition-timing-function: ease;
+        transition-duration: 0.6s;
+        transition-property: opacity;
+    }
+
     &__item {
         margin-bottom: size(16px);
         font-family: $ff-chakra-petch;
@@ -198,12 +260,22 @@
         font-weight: 300;
         line-height: size(28px);
 
+        transition-timing-function: ease;
+        transition-duration: 0.6s;
+        transition-property: opacity;
+
         &--first {
             font-family: $ff-chakra-petch;
             font-size: size(16px);
             font-style: normal;
             font-weight: 600;
             line-height: size(28px);
+            pointer-events: none;
+            cursor: none;
+
+            &:hover {
+                opacity: 1;
+            }
         }
 
         svg {
@@ -212,6 +284,7 @@
             align-self: center;
         }
     }
+
 
     &__list-support {
         list-style-type: none;

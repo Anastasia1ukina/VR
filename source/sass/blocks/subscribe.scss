@@ -1,0 +1,126 @@
+.subscribe {
+    &__subscription {
+        display: flex;
+        justify-content: space-between;
+        padding: size(38px) size(77px) size(31px) size(74px);
+        background: linear-gradient(90deg, $color-deep-sky-blue 0%, $color-free-speech-magenta 100%);
+        position: relative;
+
+        @include vp-767 {
+            display: block;
+            padding: size(31px) size(13px);
+        }
+    }
+
+    &__title {
+        font-family: $ff-chakra-petch;
+        font-size: size(40px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(58px);
+        letter-spacing: size(-0.2px);
+        margin: 0;
+        width: size(520px);
+
+        @include vp-767 {
+            width: inherit;
+            text-align: center;
+            font-size: size(26px);
+            line-height: normal;
+            letter-spacing: size(-0.14px);
+            margin: 0 0 size(8px) 0;
+        }
+    }
+
+    form {
+        position: relative;
+    }
+
+    &__form {
+        position: relative;
+        align-self: center;
+        flex: 0 1 size(365px);
+        transition-timing-function: ease;
+        transition-duration: 0.6s;
+        transition-property: opacity, visibility;
+        opacity: 0;
+    }
+
+    &__text-message {
+        font-family: $ff-chakra-petch;
+        font-size: size(30px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: size(58px);
+        letter-spacing: size(-0.2px);
+
+        position: absolute;
+        right: size(106px);
+        top: size(66px);
+        transition-timing-function: ease;
+        transition-duration: 0.6s;
+        transition-property: opacity, visibility;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        @include vp-767 {
+            font-size: size(25px);
+            line-height: size(38px);
+            letter-spacing: size(-0.2px);
+            right: size(61px);
+            top: size(150px);
+        }
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
+    &__form.active {
+        opacity: 1;
+    }
+
+    &__email .is-invalid {
+        border: 2px solid #ff1553;
+    }
+
+    &__message {
+        left: size(15px);
+        position: absolute;
+        top: calc(50% - size(12px));
+
+        svg {
+            height: size(24px);
+            width: size(24px);
+        }
+    }
+
+    &__email {
+        input {
+            background-color: rgba(255, 255, 255, 0.07);
+            color: $color-default-white;
+            padding: size(14px) size(60px) size(14px) size(48px);
+            width: 100%;
+            border: none;
+        }
+    }
+
+    &__btn-form {
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.21);
+        display: flex;
+        height: calc(100% - size(7px));
+        justify-content: center;
+        position: absolute;
+        right: size(3px);
+        top: size(3px);
+        width: size(50px);
+        cursor: pointer;
+        border: none;
+
+        svg {
+            width: size(16px);
+            height: size(16px);
+        }
+    }
+}

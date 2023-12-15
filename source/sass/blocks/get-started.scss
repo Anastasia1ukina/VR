@@ -224,8 +224,14 @@
         background-color: $color-default-black;
 
         video {
-            height: 100%;
+            width: size(1200px);
+            height: size(522px);
             object-fit: cover;
+
+            @include vp-767 {
+                width: size(398px);
+                height: size(254px);
+            }
         }
 
         &.active {

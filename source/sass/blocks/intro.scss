@@ -64,6 +64,16 @@
             width: size(1097px);
             height: size(721px);
         }
+
+        @include vp-767 {
+            left: size(-4px);
+            top: size(210px);
+
+            svg {
+                width: size(950px);
+                height: size(701px);
+            }
+        }
     }
 
     &__title {

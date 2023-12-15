@@ -1,0 +1,18 @@
+mixin subscribe()
+    .subscribe
+        .container 
+            .subscribe__subscription
+                h2.subscribe__title Subscribe to our newsletter for latest updates
+                .subscribe__text-message Your message has sent
+                .subscribe__form.active
+                    form(action="#" id="form")
+                        .subscribe__message
+                            +icon("icon-message", "24", "24")
+                        .subscribe__email
+                            +custom-input({
+                                inputType: "email",
+                                inputPlaceholder: "Enter your email address",
+                                inputName: "user-mail",
+                            }).subscribe__input
+                        button(type='submit' value='Send Request').subscribe__btn-form
+                            +icon("icon-message-btn", "16", "16")

@@ -1,5 +1,6 @@
 let navMain = document.querySelector('.main-nav');
 let navToggle = document.querySelector('.main-nav__toggle');
+let contactsBtn = document.querySelector('.main-nav__contact--mobile');
 const pageBody = document.querySelector('body');
 let htmlScroll = document.querySelector('html');
 
@@ -20,6 +21,7 @@ document.addEventListener('keydown', (evt) => {
 navToggle.addEventListener('click', (evt) => {
   if (pageBody.style.overflow === '') {
     navMain.classList.toggle('main-nav--opened');
+    contactsBtn.classList.add('active');
     pageBody.style.overflow = 'hidden';
     htmlScroll.style.overflow = 'hidden';
   } else {
@@ -29,7 +31,7 @@ navToggle.addEventListener('click', (evt) => {
   }
 });
 
-window.addEventListener('click', (evt) => {
+contactsBtn.addEventListener('click', (evt) => {
   const target = evt.target;
   if (!target.closest('.main-nav') && !target.closest('.main-nav__toggle')) {
     navMain.classList.remove('main-nav--opened');

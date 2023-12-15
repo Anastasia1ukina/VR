@@ -1,6 +1,10 @@
 .choose-about2 {
     margin-top: size(285px);
 
+    @include vp-767 {
+        margin-top: size(100px);
+    }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;

@@ -4,6 +4,7 @@ import { Form } from './modules/form-validate/form';
 import { CustomSelect } from './modules/select/custom-select';
 import { uploadFile, uploadImageDrop } from './modules/input-file/init-upload';
 import { initFeedback } from './modules/init-feedback.js';
+import './modules/init-subscribe.js';
 import { gsapAnims } from './modules/animations/gsap-home';
 import './modules/animations/blur-header';
 import './modules/animations/scroll-btn';
